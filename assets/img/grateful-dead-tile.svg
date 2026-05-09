@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Community lightning emblem</title>
+  <desc id="desc">An original circular lightning and rose emblem inspired by community-building music culture.</desc>
+  <rect x="18" y="18" width="220" height="220" rx="20" fill="#fff" stroke="#D9DFE8" stroke-width="5"/>
+  <circle cx="128" cy="120" r="76" fill="#F4F5F8" stroke="#243246" stroke-width="6"/>
+  <path d="M128 44a76 76 0 0 1 0 152z" fill="#2F5D76" opacity=".95"/>
+  <path d="M128 44a76 76 0 0 0 0 152z" fill="#F4F5F8"/>
+  <path d="M142 52l-50 80h35l-14 58 54-85h-35z" fill="#5868F2" stroke="#243246" stroke-width="5" stroke-linejoin="round"/>
+  <g fill="none" stroke="#8B78B8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+    <path d="M79 182c16-13 34-18 54-13 18 5 32 2 44-9"/>
+    <path d="M72 169c16 8 28 15 36 31M184 151c-7 18-18 31-35 39"/>
+  </g>
+  <circle cx="128" cy="120" r="91" fill="none" stroke="#5868F2" stroke-dasharray="4 10" stroke-width="2" opacity=".55"/>
+</svg>

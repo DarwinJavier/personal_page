@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Independent ecosystem tile</title>
+  <desc id="desc">An original four-bar signal tile representing independent scenes and ecosystems.</desc>
+  <rect x="18" y="18" width="220" height="220" rx="20" fill="#fff" stroke="#D9DFE8" stroke-width="5"/>
+  <g transform="translate(55 58)" fill="#121820">
+    <rect x="0" y="0" width="30" height="110" rx="2"/>
+    <rect x="39" y="9" width="30" height="110" rx="2"/>
+    <rect x="78" y="0" width="30" height="110" rx="2"/>
+    <rect x="117" y="9" width="30" height="110" rx="2"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M55 194h146" stroke="#243246" stroke-width="6"/>
+    <path d="M55 210h96" stroke="#5868F2" stroke-width="4"/>
+    <path d="M72 42c34-13 72-13 113 0" stroke="#8B78B8" stroke-dasharray="5 9" stroke-width="3"/>
+  </g>
+</svg>

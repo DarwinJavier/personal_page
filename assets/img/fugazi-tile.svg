@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Principled system tile</title>
+  <desc id="desc">An original stark black editorial tile representing principled independent systems.</desc>
+  <rect x="18" y="18" width="220" height="220" rx="20" fill="#fff" stroke="#D9DFE8" stroke-width="5"/>
+  <rect x="42" y="48" width="172" height="160" rx="10" fill="#121820"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M72 91h112M72 124h112M72 157h88" stroke="#F4F5F8" stroke-width="13"/>
+    <path d="M72 91h112M72 124h112M72 157h88" stroke="#5868F2" stroke-width="2" opacity=".6"/>
+    <path d="M62 198c37-18 82-18 132 0" stroke="#8B78B8" stroke-width="3"/>
+    <path d="M62 68c34 18 80 18 132 0" stroke="#7087A0" stroke-width="2" opacity=".6"/>
+  </g>
+</svg>

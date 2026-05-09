@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">PJ Harvey inspired portrait tile</title>
+  <desc id="desc">A stylized editorial portrait tile for the North essay map.</desc>
+  <rect x="18" y="18" width="220" height="220" rx="20" fill="#fff"/>
+  <rect x="18" y="18" width="220" height="220" rx="20" fill="#F4F5F8" stroke="#D9DFE8" stroke-width="5"/>
+  <g fill="none" stroke="#243246" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M80 91c6-36 32-54 67-43 25 8 39 31 35 67-4 39-27 66-58 65-33-1-51-38-44-89z" fill="#F8FAFE" stroke-width="5"/>
+    <path d="M72 98c8-42 35-70 75-68 28 1 47 17 56 45-22-8-42-7-61 4-23 13-45 19-70 19z" fill="#243246" stroke-width="4"/>
+    <path d="M86 103c29-4 58-14 86-32" stroke="#5868F2" stroke-width="5" opacity=".8"/>
+    <path d="M95 122c13-4 24-4 34 1M148 120c12-5 23-5 34-1" stroke-width="4"/>
+    <path d="M135 124c-7 19-9 34-3 45" stroke-width="3"/>
+    <path d="M110 175c17 12 39 10 56-3" stroke="#8B78B8" stroke-width="4"/>
+    <path d="M70 211c17-28 37-42 60-42 25 0 45 14 61 42" stroke-width="5"/>
+    <path d="M94 55c-10 18-16 38-18 61M178 59c14 13 21 33 19 60" stroke="#7087A0" stroke-width="2.5" opacity=".65"/>
+  </g>
+</svg>

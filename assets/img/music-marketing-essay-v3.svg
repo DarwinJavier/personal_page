@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Essay visual: product stories as movements</title>
+  <desc id="desc">A cool editorial map where music signals become product-era strategy, community, principles, and ecosystem.</desc>
+  <rect width="900" height="900" fill="#F4F5F8"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M68 228c122-52 236-42 344 30 135 90 272 81 411-26" stroke="#D9DFE8" stroke-width="3"/>
+    <path d="M54 318c129-56 251-43 367 37 124 86 260 73 410-39" stroke="#D9DFE8" stroke-width="2"/>
+    <path d="M74 430c116-41 216-30 302 34 144 107 292 90 445-51" stroke="#D9DFE8" stroke-width="2"/>
+    <path d="M86 554c106-36 203-25 291 33 160 105 306 78 438-80" stroke="#D9DFE8" stroke-width="2"/>
+    <path d="M101 671c91-42 193-38 305 12 128 56 257 31 386-75" stroke="#D9DFE8" stroke-width="2"/>
+  </g>
+  <g fill="none" stroke="#243246" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="222" cy="232" r="96" stroke-width="6"/>
+    <circle cx="222" cy="232" r="26" stroke="#5868F2" stroke-width="5"/>
+    <path d="M222 113v239M103 232h239M137 147l170 170M307 147L137 317" stroke-width="2.5" opacity=".55"/>
+    <path d="M222 162l18 52 52 18-52 18-18 52-18-52-52-18 52-18z" fill="#fff" stroke-width="4"/>
+  </g>
+  <g fill="none" stroke="#5868F2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M307 291c78 12 141 46 188 102 54 64 126 94 214 88" stroke-width="5"/>
+    <path d="M684 456l31 24-36 15" stroke-width="5"/>
+    <path d="M260 359c41 95 124 151 250 169" stroke-width="3" stroke-dasharray="9 13"/>
+    <path d="M487 510l28 20-31 17" stroke-width="3"/>
+  </g>
+  <g fill="#fff" stroke="#D9DFE8" stroke-width="3">
+    <rect x="396" y="216" width="154" height="104" rx="14"/>
+    <rect x="575" y="290" width="154" height="104" rx="14"/>
+    <rect x="472" y="442" width="154" height="104" rx="14"/>
+    <rect x="643" y="580" width="154" height="104" rx="14"/>
+  </g>
+  <g fill="none" stroke="#243246" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M421 254h78M421 278h103M421 301h64" stroke-width="4"/>
+    <path d="M602 327c20-19 55-19 76 0 20-19 55-19 75 0M621 354h78" stroke-width="4"/>
+    <path d="M502 477h92M502 503h58M673 621h90M673 647h62" stroke-width="4"/>
+  </g>
+  <g fill="#5868F2" opacity=".85">
+    <circle cx="402" cy="411" r="7"/>
+    <circle cx="532" cy="376" r="7"/>
+    <circle cx="634" cy="493" r="7"/>
+    <circle cx="744" cy="545" r="7"/>
+    <circle cx="812" cy="440" r="5"/>
+    <circle cx="133" cy="499" r="5"/>
+  </g>
+  <g fill="none" stroke="#8B78B8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+    <path d="M145 713c88-40 175-31 262 27 85 57 176 64 273 21"/>
+    <path d="M154 752c77-25 149-16 217 27"/>
+  </g>
+  <g fill="none" stroke="#243246" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M118 602h54M132 620h86M124 638h62" stroke-width="4" opacity=".72"/>
+    <path d="M748 176l19 19M767 176l-19 19M760 162v47M736 186h47" stroke="#5868F2" stroke-width="3"/>
+    <path d="M335 696l15 15M350 696l-15 15M343 685v37M324 704h38" stroke="#8B78B8" stroke-width="3"/>
+  </g>
+</svg>
