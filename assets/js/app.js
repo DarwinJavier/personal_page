@@ -6,7 +6,6 @@ const page = document.body.dataset.page || "home";
 const navItems = [
   ["Writing", "writing/"],
   ["Projects", "projects/"],
-  ["Now", "now/"],
   ["About", "about/"],
 ];
 
@@ -99,7 +98,6 @@ function footer() {
         <h2>Navigation</h2>
         <a href="${pathFor("writing/")}">Writing</a>
         <a href="${pathFor("projects/")}">Projects</a>
-        <a href="${pathFor("now/")}">Now</a>
         <a href="${pathFor("about/")}">About</a>
       </div>
       <div>
