@@ -4,8 +4,8 @@ const rootPath = document.body.dataset.root || ".";
 const page = document.body.dataset.page || "home";
 
 const navItems = [
-  ["Writing", "writing/"],
   ["Projects", "projects/"],
+  ["Writing", "writing/"],
   ["About", "about/"],
 ];
 
@@ -92,12 +92,12 @@ function footer() {
       <div>
         <a class="brand footer-brand" href="${pathFor("index.html")}">Darwin Hernandez</a>
         <p>AI - Product Marketing - Culture</p>
-        <p>Writer, builder, strategist.</p>
+        <p>Builder, writer, strategist.</p>
       </div>
       <div>
         <h2>Navigation</h2>
-        <a href="${pathFor("writing/")}">Writing</a>
         <a href="${pathFor("projects/")}">Projects</a>
+        <a href="${pathFor("writing/")}">Writing</a>
         <a href="${pathFor("about/")}">About</a>
       </div>
       <div>

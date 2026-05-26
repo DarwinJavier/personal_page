@@ -200,7 +200,7 @@ h3 {
   margin-top: 28px;
 }
 
-.connect-row span {
+.connect-label {
   color: var(--blueprint);
   font-size: 0.75rem;
   font-weight: 800;
@@ -217,7 +217,9 @@ h3 {
 .social-link {
   align-items: center;
   display: inline-flex;
-  gap: 8px;
+  gap: 7px;
+  line-height: 1;
+  min-height: 24px;
 }
 
 .social-icon {
@@ -237,13 +239,18 @@ h3 {
 
 .github-svg {
   fill: var(--harbor);
-  height: 19px;
-  width: 19px;
+  height: 18px;
+  transform: translateY(-1px);
+  width: 18px;
 }
 
 .linkedin-icon {
+  background: var(--harbor);
+  border-radius: 3px;
+  color: var(--moonstone);
   font-family: Inter, Arial, sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
+  font-weight: 800;
 }
 
 .substack-icon {
@@ -1794,11 +1801,16 @@ time {
   }
 
   .connect-row {
-    gap: 16px;
+    column-gap: 18px;
+    row-gap: 14px;
   }
 
-  .connect-row span {
+  .connect-label {
     flex-basis: 100%;
+  }
+
+  .social-link {
+    font-size: 0.92rem;
   }
 
   .section {
