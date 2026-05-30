@@ -18,6 +18,7 @@
     <meta name="twitter:description" content="AI-fluent Product Marketing and GTM strategist, builder, and critical thinker. I translate complex technology into positioning, narrative, and growth.">
     <meta name="twitter:image" content="https://www.darwinhernandez.com/assets/img/wayfinder-hero.png">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/north-chat.css">
   </head>
   <body data-page="about" data-root="..">
     <header id="site-header" class="site-header"></header>
@@ -55,22 +56,47 @@
         <div class="section-header">
           <span class="eyebrow">Frequently Asked</span>
         </div>
-        <div class="faq-list">
-          <div class="faq-item">
-            <h3>Who is Darwin Hernandez?</h3>
-            <p>Darwin Hernandez is an AI-fluent Product Marketing and Go-to-Market (GTM) strategist, builder, and critical thinker. He helps companies translate complex technology into clear positioning, narrative, and growth strategy. He writes about AI, product marketing, and culture, and builds AI experiments and tools in public.</p>
+        <div class="faq-north-grid">
+          <div class="faq-list">
+            <div class="faq-item">
+              <h3>Who is Darwin Hernandez?</h3>
+              <p>Darwin Hernandez is an AI-fluent Product Marketing and Go-to-Market (GTM) strategist, builder, and critical thinker. He helps companies translate complex technology into clear positioning, narrative, and growth strategy. He writes about AI, product marketing, and culture, and builds AI experiments and tools in public.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What does Darwin Hernandez specialize in?</h3>
+              <p>Darwin Hernandez specializes in product marketing, go-to-market strategy, AI-powered workflows, brand positioning, and strategic storytelling. He brings both strategic judgment and hands-on building experience to GTM challenges.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What has Darwin Hernandez built?</h3>
+              <p>Darwin Hernandez has built several public AI projects including music-crewai (a multi-agent music research tool), Puchi &amp; Pao's Sparkling Adventure (a 16-bit platform game), a job search agent, a family planner, and a Kanban board. All projects are open source on <a href="https://github.com/DarwinJavier" target="_blank" rel="noreferrer">GitHub</a>.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Where can I read Darwin Hernandez's writing?</h3>
+              <p>Darwin Hernandez publishes essays on AI, product marketing, culture, and strategy on his <a href="https://mrdasein.substack.com/" target="_blank" rel="noreferrer">Substack</a> and indexes all writing at <a href="https://www.darwinhernandez.com/writing/" target="_blank" rel="noreferrer">darwinhernandez.com/writing/</a>.</p>
+            </div>
           </div>
-          <div class="faq-item">
-            <h3>What does Darwin Hernandez specialize in?</h3>
-            <p>Darwin Hernandez specializes in product marketing, go-to-market strategy, AI-powered workflows, brand positioning, and strategic storytelling. He brings both strategic judgment and hands-on building experience to GTM challenges.</p>
-          </div>
-          <div class="faq-item">
-            <h3>What has Darwin Hernandez built?</h3>
-            <p>Darwin Hernandez has built several public AI projects including music-crewai (a multi-agent music research tool), Puchi &amp; Pao's Sparkling Adventure (a 16-bit platform game), a job search agent, a family planner, and a Kanban board. All projects are open source on <a href="https://github.com/DarwinJavier" target="_blank" rel="noreferrer">GitHub</a>.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Where can I read Darwin Hernandez's writing?</h3>
-            <p>Darwin Hernandez publishes essays on AI, product marketing, culture, and strategy on his <a href="https://mrdasein.substack.com/" target="_blank" rel="noreferrer">Substack</a> and indexes all writing at <a href="https://www.darwinhernandez.com/writing/" target="_blank" rel="noreferrer">darwinhernandez.com/writing/</a>.</p>
+          <div class="north-chat" id="north-chat">
+            <div class="north-chat-header">
+              <img src="../assets/img/wayfinder_explorer-cutout.png" alt="North" class="north-chat-avatar">
+              <div>
+                <span class="north-chat-name">North</span>
+                <span class="north-chat-tagline">Darwin's guide</span>
+              </div>
+            </div>
+            <div id="north-chat-thread" class="north-chat-thread" aria-live="polite"></div>
+            <form id="north-chat-form" class="north-chat-form" novalidate>
+              <div class="north-chat-input-row">
+                <input
+                  id="north-chat-input"
+                  type="text"
+                  placeholder="Ask North about Darwin's work…"
+                  maxlength="350"
+                  autocomplete="off"
+                  aria-label="Message North">
+                <button type="submit" aria-label="Send">&#8594;</button>
+              </div>
+              <span id="north-chat-counter" class="north-chat-counter">350</span>
+            </form>
           </div>
         </div>
       </section>
@@ -86,5 +112,6 @@
     </main>
     <footer id="site-footer" class="footer"></footer>
     <script type="module" src="../assets/js/app.js"></script>
+    <script type="module" src="../assets/js/north-chat.js"></script>
   </body>
 </html>
