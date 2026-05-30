@@ -1947,7 +1947,6 @@ time {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 720px;
 }
 
 .faq-item h3 {
