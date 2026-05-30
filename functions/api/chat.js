@@ -63,7 +63,7 @@ function corsHeaders(origin) {
 
 export async function onRequestOptions({ request }) {
   const origin = request.headers.get("Origin") ?? "";
-  return new Response(null, { headers: corsHeaders(origin) });
+  return new Response(null, { status: 204, headers: corsHeaders(origin) });
 }
 
 export async function onRequestPost({ request, env }) {
@@ -81,16 +81,27 @@ export async function onRequestPost({ request, env }) {
   }
 
   const { messages } = body;
-  if (!Array.isArray(messages) || messages.length === 0) {
+  const ALLOWED_ROLES = new Set(["user", "assistant"]);
+  if (
+    !Array.isArray(messages) ||
+    messages.length === 0 ||
+    messages.length > 10
+  ) {
     return new Response(JSON.stringify({ error: "messages required" }), {
       status: 400,
       headers: { ...headers, "Content-Type": "application/json" },
     });
   }
 
-  const last = messages[messages.length - 1];
-  if (!last?.content || last.content.length > 350) {
-    return new Response(JSON.stringify({ error: "Message too long or empty" }), {
+  const invalid = messages.some(
+    (m) =>
+      !ALLOWED_ROLES.has(m?.role) ||
+      typeof m?.content !== "string" ||
+      m.content.length === 0 ||
+      m.content.length > 350
+  );
+  if (invalid) {
+    return new Response(JSON.stringify({ error: "Invalid message format" }), {
       status: 400,
       headers: { ...headers, "Content-Type": "application/json" },
     });
@@ -127,7 +138,6 @@ export async function onRequestPost({ request, env }) {
       ...headers,
       "Content-Type": "text/event-stream",
       "Cache-Control": "no-cache",
-      "X-Accel-Buffering": "no",
     },
   });
 }
