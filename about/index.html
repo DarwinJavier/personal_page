@@ -84,7 +84,7 @@
               </div>
             </div>
             <div id="north-chat-thread" class="north-chat-thread" aria-live="polite"></div>
-            <form id="north-chat-form" class="north-chat-form" novalidate>
+            <form id="north-chat-form" class="north-chat-form" novalidate aria-label="Chat with North">
               <div class="north-chat-input-row">
                 <input
                   id="north-chat-input"
@@ -92,7 +92,8 @@
                   placeholder="Ask North about Darwin's work…"
                   maxlength="350"
                   autocomplete="off"
-                  aria-label="Message North">
+                  aria-label="Message North"
+                  aria-describedby="north-chat-counter">
                 <button type="submit" aria-label="Send">&#8594;</button>
               </div>
               <span id="north-chat-counter" class="north-chat-counter">350</span>
