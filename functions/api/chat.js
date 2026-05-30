@@ -70,6 +70,13 @@ export async function onRequestPost({ request, env }) {
   const origin = request.headers.get("Origin") ?? "";
   const headers = corsHeaders(origin);
 
+  if (!env.OPENAI_API_KEY) {
+    return new Response(JSON.stringify({ error: "Service not configured" }), {
+      status: 503,
+      headers: { ...headers, "Content-Type": "application/json" },
+    });
+  }
+
   let body;
   try {
     body = await request.json();
