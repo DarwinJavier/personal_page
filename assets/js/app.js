@@ -477,8 +477,8 @@ function schemaForWriting() {
         "url": essay.sourceUrl,
         "author": {
           "@type": "Person",
-          "name": "Darwin Hernandez",
-          "url": "https://www.darwinhernandez.com"
+          "name": personSchema.name,
+          "url": personSchema.url
         }
       }
     }))
@@ -500,8 +500,8 @@ function schemaForProjects() {
         "url": project.githubUrl,
         "author": {
           "@type": "Person",
-          "name": "Darwin Hernandez",
-          "url": "https://www.darwinhernandez.com"
+          "name": personSchema.name,
+          "url": personSchema.url
         }
       }
     }))
