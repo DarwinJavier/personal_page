@@ -376,6 +376,138 @@ function renderNow() {
   $("#now-projects").innerHTML = projects.slice(0, 3).map((item) => projectCard(item, "feature")).join("");
 }
 
+function injectSchema(schema) {
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+}
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Darwin Hernandez",
+  "jobTitle": "Product Marketing & GTM Strategist",
+  "description": "AI-fluent Product Marketing and Go-to-Market (GTM) strategist, builder, and critical thinker.",
+  "url": "https://www.darwinhernandez.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/darwin-javier-hernandez/",
+    "https://mrdasein.substack.com/",
+    "https://github.com/DarwinJavier"
+  ]
+};
+
+function schemaForHome() {
+  injectSchema(personSchema);
+}
+
+function schemaForAbout() {
+  injectSchema({
+    ...personSchema,
+    "knowsAbout": [
+      "Product Marketing",
+      "Go-to-Market Strategy",
+      "Artificial Intelligence",
+      "GTM Strategy",
+      "Storytelling",
+      "Brand Positioning"
+    ]
+  });
+  injectSchema({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is Darwin Hernandez?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Darwin Hernandez is an AI-fluent Product Marketing and Go-to-Market (GTM) strategist, builder, and critical thinker. He helps companies translate complex technology into clear positioning, narrative, and growth strategy. He writes about AI, product marketing, and culture, and builds AI experiments and tools in public."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does Darwin Hernandez specialize in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Darwin Hernandez specializes in product marketing, go-to-market strategy, AI-powered workflows, brand positioning, and strategic storytelling. He brings both strategic judgment and hands-on building experience to GTM challenges."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Darwin Hernandez available for work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Darwin Hernandez is open to conversations about senior product marketing roles, GTM consulting engagements, and selected collaborations at the intersection of AI and marketing. Connect with him on LinkedIn at linkedin.com/in/darwin-javier-hernandez/."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What has Darwin Hernandez built?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Darwin Hernandez has built several public AI projects including music-crewai (a multi-agent music research tool), Puchi & Pao's Sparkling Adventure (a 16-bit platform game), a job search agent, a family planner, and a Kanban board. All projects are open source on GitHub at github.com/DarwinJavier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I read Darwin Hernandez's writing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Darwin Hernandez publishes essays on AI, product marketing, culture, and strategy on his Substack at mrdasein.substack.com and indexes all writing at darwinhernandez.com/writing/."
+        }
+      }
+    ]
+  });
+}
+
+function schemaForWriting() {
+  injectSchema({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Essays by Darwin Hernandez",
+    "itemListElement": writing.map((essay, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Article",
+        "headline": essay.title,
+        "description": essay.summary,
+        "datePublished": essay.date,
+        "url": essay.sourceUrl,
+        "author": {
+          "@type": "Person",
+          "name": "Darwin Hernandez",
+          "url": "https://www.darwinhernandez.com"
+        }
+      }
+    }))
+  });
+}
+
+function schemaForProjects() {
+  injectSchema({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Projects by Darwin Hernandez",
+    "itemListElement": projects.map((project, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": project.title,
+        "description": project.plainEnglishDescription,
+        "url": project.githubUrl,
+        "author": {
+          "@type": "Person",
+          "name": "Darwin Hernandez",
+          "url": "https://www.darwinhernandez.com"
+        }
+      }
+    }))
+  });
+}
+
 function renderAbout() {
   const aboutArt = $("#about-art");
   const aboutNow = $("#about-now");
@@ -388,9 +520,9 @@ footer();
 document.documentElement.classList.remove("dark");
 localStorage.removeItem("darwin-theme");
 
-if (page === "home") renderHome();
-if (page === "writing") renderWriting();
+if (page === "home") { renderHome(); schemaForHome(); }
+if (page === "writing") { renderWriting(); schemaForWriting(); }
 if (page === "writing-b") renderWritingB();
-if (page === "projects") renderProjects();
+if (page === "projects") { renderProjects(); schemaForProjects(); }
 if (page === "now") renderNow();
-if (page === "about") renderAbout();
+if (page === "about") { renderAbout(); schemaForAbout(); }
