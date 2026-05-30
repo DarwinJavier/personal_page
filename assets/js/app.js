@@ -435,14 +435,6 @@ function schemaForAbout() {
       },
       {
         "@type": "Question",
-        "name": "Is Darwin Hernandez available for work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Darwin Hernandez is open to conversations about senior product marketing roles, GTM consulting engagements, and selected collaborations at the intersection of AI and marketing. Connect with him on LinkedIn at linkedin.com/in/darwin-javier-hernandez/."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "What has Darwin Hernandez built?",
         "acceptedAnswer": {
           "@type": "Answer",
