@@ -67,6 +67,8 @@ async function streamReply(bubble, thread) {
   });
 
   if (!response.ok) {
+    const errorText = await response.text().catch(() => "");
+    console.error(`[North] API error ${response.status}:`, errorText);
     throw new Error(`HTTP ${response.status}`);
   }
 
