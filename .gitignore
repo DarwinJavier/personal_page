@@ -36,4 +36,10 @@ Thumbs.db
 desktop.ini
 .vscode/
 .idea/
+
+# Secrets
 .dev.vars
+.dev.vars*
+
+# Wrangler build artifacts
+.wrangler/
