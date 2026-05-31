@@ -88,7 +88,7 @@ async function streamReply(bubble, thread) {
     for (const line of lines) {
       if (!line.startsWith("data: ")) continue;
       const data = line.slice(6).trim();
-      if (data === "[DONE]") return fullText;
+      if (data === "[DONE]") { linkify(bubble, fullText); return fullText; }
 
       try {
         const parsed = JSON.parse(data);
