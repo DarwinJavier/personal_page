@@ -27,6 +27,27 @@ EXPERTISE:
 - Strategic Storytelling and Brand Positioning
 - Cultural Pattern Recognition — using music, books, and culture to understand how movements form
 
+DARWIN'S BACKGROUND & CAREER STORY:
+Darwin grew up in Caracas, Venezuela, the son of a blue-collar painter and a mother who sewed and ironed clothing for priests at UCAB. Neither parent had a corporate career. Both modeled the dignity of work and the idea that effort is the one variable you control.
+
+His original dream was engineering. He wasn't accepted. He enrolled in accounting at Universidad Central de Venezuela instead — and discovered that a P&L tells a story, a balance sheet reveals decisions, and numbers require someone who knows how to read them. He graduated with a B.S. in Accounting in 2007. He was already working — at Deloitte, where he joined before finishing his degree and left as a Senior Auditor in 2009. Deloitte taught him analytical rigor and showed him that auditing is backward-looking. He wanted to understand what could happen. He pursued a Master's in Marketing at UCAB and a Diploma in Innovation at Universidad Metropolitana during that period.
+
+He joined Telefonica Venezuela in 2009 and eventually led the prepaid consumer segment — nationwide direct marketing across 50,000+ points of sale. Then Venezuela changed. The economy deteriorated. Darwin and his wife had a three-year-old daughter. They applied to graduate programs in the United States and were accepted. They moved to Monroe, Louisiana.
+
+In Louisiana, it was the three of them. Short on money. No extended family. They spent Christmas alone, thousands of miles from home. Darwin served as a Business Advisor at the Louisiana Small Business Development Center, building financial models for local entrepreneurs, while completing his MBA at the University of Louisiana at Monroe. During his MBA, he designed a complete two-sided marketplace for on-demand delivery — GPS tracking, real-time chat, 10% commission model — before Uber Eats and Instacart existed at national scale. His professor told him to execute it. His constraints prevented it. The market validated the idea two years later at multi-billion dollar scale. He graduated with a 4.0 GPA in 2017. The lesson was not regret. It was confirmation: he could see markets before they existed.
+
+Darwin joined CenturyLink (later Lumen Technologies) through an MBA internship in 2016. He stayed for nearly a decade — not out of inertia, but because the scope kept expanding.
+
+As Chief of Staff to the VP of Small Business Group (2016–2019), he reduced planning timelines 25%, led GTM for fiber broadband achieving 100%+ YoY revenue growth, and built Salesforce dashboards that gave executives real-time visibility.
+
+As Senior Lead PMM, Cybersecurity (2022–2024), he rebuilt a neglected 5-SKU professional security services portfolio from zero PMM support — Managed SIEM, Virtual SOC, Pen Testing, Vulnerability Assessment, DDoS Mitigation. He validated messaging directly with Gartner, IDC, and Frost & Sullivan analysts — not seeking commissioned research, but presenting original positioning as a peer. Results: 70%+ sales asset adoption, ~10% ARR growth, 10% YoY increase in closed-won deals. He positioned DDoS Mitigation as the strategic bridge between Lumen's connectivity identity and its security ambitions, using Black Lotus Labs' Rapid Threat Defense as a differentiator no competitor could easily replicate.
+
+In January 2024, Darwin conceived and ran the Copilot Olympics — alone in his home office during Christmas break 2023, pitched cold to his manager in early January, first event ran by end of January. It scaled to Lumen's entire 250-person marketing organization. Microsoft's editorial newsroom named and quoted Darwin as the person who conceived it. His CMO was in the same article. Darwin was the only Lumen marketer recognized by name. Feature: https://news.microsoft.com/source/features/digital-transformation/the-only-way-how-copilot-is-helping-propel-an-evolution-at-lumen-technologies/
+
+In his current role (2024–present), he leads PMM for Lumen's Validated Designs program — pre-tested multi-vendor architectures that solve specific enterprise business problems. His flagship: Cyber Resilience with Commvault — a validated architecture that Lumen runs in its own production environment. He also directed GTM for four enterprise bundle solutions (DIA + DDoS, DIA + SASE, IP VPN + SASE, DIA + Cloud Voice), producing 30+ assets per bundle, contributing to 1.3x deal size increase and 20% seller ramp reduction.
+
+Darwin's defining pattern: he receives ambiguous briefs and builds structure others can execute against. The AI framework. The Copilot Olympics. The bundle GTM forums. The LVD program. Unclear brief → Darwin's structure → team execution → shipped output → measurable result. He is analytically grounded in a field full of storytellers who can't do math. He is an ecosystem thinker, not a product thinker. He is a builder.
+
 WHERE TO FIND DARWIN:
 - Writing: darwinhernandez.com/writing and mrdasein.substack.com
 - Projects: darwinhernandez.com/projects and github.com/DarwinJavier
