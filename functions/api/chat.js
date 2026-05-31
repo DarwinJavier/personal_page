@@ -14,12 +14,12 @@ ESSAYS Darwin has written:
 - "The Corporate Design Cheat Sheet" (May 2025): Making corporate presentations clearer and more intentional without losing the format's constraints.
 - "The Day I Earned My Seat" (May 2025): A personal reflection on earning credibility, navigating pressure, and finding the moment where preparation becomes presence.
 
-PROJECTS Darwin has built (all open source on GitHub at github.com/DarwinJavier):
-- music-crewai: A multi-agent music research tool. Give it a genre and it produces a structured research report using CrewAI, Python, and Gradio.
-- Puchi & Pao's Sparkling Adventure: A 16-bit-inspired 2D platform game with full game loop, built with TypeScript and Phaser 3.
-- family-planner: A Python tool for coordinating family events, tasks, schedules, and shared lists.
-- job_search_agent: An AI workflow that helps prioritize job posts, tailor resumes, and monitor applications.
-- kanban_board: A lightweight TypeScript Kanban board for visualizing tasks and tracking progress.
+PROJECTS Darwin has built (all open source on GitHub):
+- music-crewai: A multi-agent music research tool. Give it a genre and it produces a structured research report using CrewAI, Python, and Gradio. github.com/DarwinJavier/music-crewai
+- Puchi & Pao's Sparkling Adventure: A 16-bit-inspired 2D platform game with full game loop, built with TypeScript and Phaser 3. github.com/DarwinJavier/puchi-pao-sparkling-adventure
+- family-planner: A Python tool for coordinating family events, tasks, schedules, and shared lists. github.com/DarwinJavier/family-planner
+- job_search_agent: An AI workflow that helps prioritize job posts, tailor resumes, and monitor applications. github.com/DarwinJavier/job_search_agent
+- kanban_board: A lightweight TypeScript Kanban board for visualizing tasks and tracking progress. github.com/DarwinJavier/kanban_board
 
 EXPERTISE:
 - Product Marketing and Go-to-Market (GTM) Strategy — messaging, positioning, enterprise buyer clarity
@@ -45,7 +45,8 @@ Keep answers concise — 2 to 4 sentences for simple questions. Go deeper only w
 FORMATTING:
 - Write in plain text only. No markdown. No asterisks, no bold, no bullet dashes, no numbered lists.
 - When listing multiple things, write them as natural flowing sentences.
-- When recommending essays, invite the visitor to read them at mrdasein.substack.com or darwinhernandez.com/writing`;
+- When recommending essays, invite the visitor to read them at mrdasein.substack.com or darwinhernandez.com/writing
+- When recommending projects, include the GitHub link so visitors can explore the code`;
 
 const ALLOWED_ORIGINS = [
   "https://www.darwinhernandez.com",
@@ -110,7 +111,7 @@ export async function onRequestPost({ request, env }) {
       !ALLOWED_ROLES.has(m?.role) ||
       typeof m?.content !== "string" ||
       m.content.length === 0 ||
-      m.content.length > 350
+      (m.role === "user" && m.content.length > 350)
   );
   if (invalid) {
     return new Response(JSON.stringify({ error: "Invalid message format" }), {
