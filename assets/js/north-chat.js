@@ -100,7 +100,19 @@ async function streamReply(bubble, thread) {
     }
   }
 
+  linkify(bubble, fullText);
   return fullText;
+}
+
+function linkify(bubble, text) {
+  const escaped = text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+  bubble.innerHTML = escaped.replace(
+    /(https?:\/\/[^\s]+)/g,
+    '<a href="$1" target="_blank" rel="noreferrer">$1</a>'
+  );
 }
 
 document.addEventListener("DOMContentLoaded", init);
