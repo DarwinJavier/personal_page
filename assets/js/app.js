@@ -191,13 +191,19 @@ function projectCard(project, variant = "grid") {
 
 function projectArchiveCard(project) {
   const proofPoints = project.proofPoints || [project.northSignal, project.whatThisProves];
+  const projectActions = [
+    `<a class="button secondary essay-card-cta" href="${project.githubUrl}" target="_blank" rel="noreferrer">View on GitHub ${icon("external")}</a>`,
+    project.demoUrl
+      ? `<a class="button primary essay-card-cta" href="${project.demoUrl}" target="_blank" rel="noreferrer">View Form ${icon("external")}</a>`
+      : "",
+  ].join("");
   return `
     <article class="project-showcase-card">
       <div class="project-showcase-image" style="background-image: url('${assetPath(project.image)}')" aria-hidden="true"></div>
       <div class="project-showcase-copy">
         <div class="project-showcase-topline">
           <span class="eyebrow">${project.language}</span>
-          <span class="pill">${project.featured ? "Featured" : "Experiment"}</span>
+          <span class="pill">${project.status || (project.featured ? "Featured" : "Experiment")}</span>
         </div>
         <h2>${project.title}</h2>
         <p class="strong">${project.shortDescription}</p>
@@ -208,12 +214,15 @@ function projectArchiveCard(project) {
         </div>
         <div class="project-signal-list">
           ${proofPoints.slice(0, 3).map((point, index) => `
-            <p><span>${lineIcon(["target", "brain", "globe"][index] || "target")}</span>${point}</p>
+            <p>
+              <span class="project-signal-icon">${lineIcon(["target", "brain", "globe"][index] || "target")}</span>
+              <span class="project-signal-copy">${point.title ? `<strong>${point.title}</strong>` : ""}${point.text || point}</span>
+            </p>
           `).join("")}
         </div>
         <div class="project-showcase-footer">
           ${tagList(project.builtWith)}
-          <a class="button secondary essay-card-cta" href="${project.githubUrl}" target="_blank" rel="noreferrer">View on GitHub ${icon("external")}</a>
+          <div class="project-actions">${projectActions}</div>
         </div>
       </div>
     </article>

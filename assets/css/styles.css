@@ -876,7 +876,7 @@ body[data-page="home"] #hero-art .generated-art .handwritten {
   align-items: center;
   display: grid;
   gap: 14px;
-  grid-template-columns: 58px 1fr;
+  grid-template-columns: 82px 1fr;
   position: relative;
 }
 
@@ -891,10 +891,10 @@ body[data-page="home"] #hero-art .generated-art .handwritten {
   font-family: var(--mono);
   font-size: 0.85rem;
   font-weight: 800;
-  height: 48px;
+  height: 56px;
   justify-content: center;
   position: relative;
-  width: 48px;
+  width: 72px;
   z-index: 1;
 }
 
@@ -1207,7 +1207,7 @@ time {
   margin: 0;
 }
 
-.project-signal-list span {
+.project-signal-icon {
   align-items: center;
   background: rgba(88, 104, 242, 0.09);
   border: 1px solid rgba(88, 104, 242, 0.16);
@@ -1217,6 +1217,20 @@ time {
   height: 30px;
   justify-content: center;
   width: 30px;
+}
+
+.project-signal-copy {
+  color: var(--harbor-soft);
+}
+
+.project-signal-copy strong {
+  color: var(--harbor);
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 3px;
+  text-transform: uppercase;
 }
 
 .project-signal-list svg {
@@ -1237,6 +1251,13 @@ time {
 
 .project-showcase-footer .tags {
   margin: 0;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
 }
 
 .project-card {
@@ -1550,7 +1571,7 @@ time {
   background-color: rgba(237, 241, 248, 0.68);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   border-bottom: 1px solid var(--line);
   flex: 0 0 auto;
 }
@@ -1902,7 +1923,7 @@ time {
   }
 
   .north-map-card li {
-    grid-template-columns: 54px 1fr;
+    grid-template-columns: 72px 1fr;
   }
 
   .writing-b-hero {

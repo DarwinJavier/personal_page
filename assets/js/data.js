@@ -6,6 +6,45 @@ export const links = {
 
 export const writing = [
   {
+    slug: "harder-better-faster-stronger",
+    title: "Harder, Better, Faster, Stronger",
+    subtitle: "On staying in the room.",
+    sourceUrl: "https://mrdasein.substack.com/p/harder-better-faster-stronger",
+    date: "2026-05-17",
+    summary:
+      "A reflection on AI, tokens, judgment, and the work of staying in the room.",
+    northSignal:
+      "Use the machine. Keep the part that makes you human.",
+    whyItMatters:
+      "As AI gets faster and tokens get more expensive, the durable advantage is knowing when to spend attention, when to save it, and when to stay with the work.",
+    tags: ["AI", "Judgment", "Tech Culture", "Creative Practice"],
+    featured: true,
+    image: "assets/Images/Harder-Page.png",
+    featuredImage: "assets/Images/Harder-Page.png",
+    mapItems: [
+      {
+        name: "Stay in the room",
+        note: "The tool can help build. You still have to guide.",
+        image: "assets/Images/Harder - thumb - 1.png",
+      },
+      {
+        name: "Make it personal",
+        note: "The best proof is meaning, not speed.",
+        image: "assets/Images/Harder - thumb - 2.png",
+      },
+      {
+        name: "Spend attention wisely",
+        note: "Tokens, tools, and focus are now strategic resources.",
+        image: "assets/Images/Harder - thumb - 3.png",
+      },
+      {
+        name: "Keep the human loop",
+        note: "If machines learn by watching us, be worth watching.",
+        image: "assets/Images/Harder - thumb - 4.png",
+      },
+    ],
+  },
+  {
     slug: "the-value-of-the-struggle",
     title: "The Value of the Struggle",
     subtitle: "The risk with AI is not stupidity. It is anonymity.",
@@ -77,7 +116,6 @@ export const writing = [
       },
     ],
     tags: ["Culture", "GTM", "Storytelling", "Branding"],
-    featured: true,
     image: "assets/Images/new_lessons_featured_essay.png",
     featuredImage: "assets/Images/new_lessons_featured_essay.png",
   },
@@ -196,6 +234,39 @@ export const writing = [
 ];
 
 export const projects = [
+  {
+    slug: "business-lead-assistant",
+    title: "business-lead-assistant",
+    githubUrl: "https://github.com/DarwinJavier/business_lead_assistant",
+    demoUrl: "https://business-lead-assistant.vercel.app/",
+    language: "Next.js / AI Workflow",
+    status: "Experiment",
+    shortDescription:
+      "Turns vague contractor inquiries into clear, qualified project briefs.",
+    plainEnglishDescription:
+      "A multi-tenant lead intake app for local service businesses, starting with renovation and home-service contractors. Each contractor gets a branded intake page where homeowners submit project details, photos, budget range, timeline, and contact preferences. The system then uses AI to summarize the lead, score fit, flag missing information, and notify both contractor and homeowner.",
+    whatThisProves:
+      "AI is most useful when it turns messy real-world inputs into structured decisions people can act on.",
+    builtWith: ["Next.js", "OpenAI", "Supabase", "Resend", "Lead Intake", "Small Business"],
+    northSignal: "Messy inputs become useful decisions when the workflow is designed around real people.",
+    proofPoints: [
+      {
+        title: "Guided intake",
+        text: "Captures project type, goals, location, timeline, budget range, photos, and preferred contact method.",
+      },
+      {
+        title: "AI lead qualification",
+        text: "Generates a plain-language summary, fit score, missing information, and recommended next step without giving unsafe construction, permit, cost, or legal advice.",
+      },
+      {
+        title: "Small-business workflow",
+        text: "Supports contractor notifications, homeowner confirmations, lead photo uploads, multi-tenant storage, and an admin dashboard for reviewing and managing leads.",
+      },
+    ],
+    stars: 0,
+    forks: 0,
+    image: "assets/Images/contractor-lead-image.png",
+  },
   {
     slug: "music-crewai",
     title: "music-crewai",
