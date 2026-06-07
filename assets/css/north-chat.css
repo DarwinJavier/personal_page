@@ -113,12 +113,14 @@
   font-size: 0.875rem;
   color: var(--harbor);
   background: #fff;
-  outline: none;
-  transition: border-color 0.15s;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
-.north-chat-input-row input:focus {
+.north-chat-input-row input:focus-visible {
   border-color: var(--blueprint);
+  box-shadow: var(--focus-ring);
+  outline: 2px solid var(--blueprint);
+  outline-offset: 2px;
 }
 
 .north-chat-input-row button {
@@ -129,11 +131,11 @@
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: opacity 0.15s;
+  transition: opacity 180ms ease, transform 160ms var(--ease-out);
 }
 
-.north-chat-input-row button:hover {
-  opacity: 0.75;
+.north-chat-input-row button:active {
+  transform: scale(0.97);
 }
 
 .north-chat-input-row button:disabled {
@@ -150,4 +152,16 @@
 
 .north-chat-counter.near-limit {
   color: #c0392b;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .north-chat-input-row button:hover {
+    opacity: 0.75;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .north-chat-input-row button:active {
+    transform: none;
+  }
 }
