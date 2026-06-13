@@ -13,34 +13,6 @@ function $(selector) {
   return document.querySelector(selector);
 }
 
-function initReveal() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08, rootMargin: "0px 0px -32px 0px" });
-
-  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-}
-
-function applyReveal(container, selector = ":scope > *") {
-  const els = container ? container.querySelectorAll(selector) : [];
-  els.forEach((el, i) => {
-    el.classList.add("reveal");
-    el.style.setProperty("--reveal-delay", `${i * 68}ms`);
-  });
-  initReveal();
-}
-
-function animateHero() {
-  document.querySelectorAll(".hero-reveal").forEach((el) => {
-    requestAnimationFrame(() => el.classList.add("visible"));
-  });
-}
-
 function formatDate(value) {
   return new Intl.DateTimeFormat("en", {
     month: "short",
@@ -385,52 +357,27 @@ function renderHome() {
         loading="lazy"></iframe>
     </div>
   `;
-  const nowList = $("#now-list");
-  const principlesList = $("#principles");
-  const latestWriting = $("#latest-writing");
-
-  if (nowList) { nowList.innerHTML = nowItems.map(nowCard).join(""); applyReveal(nowList); }
-  if (principlesList) { principlesList.innerHTML = principles.map(principleCard).join(""); applyReveal(principlesList); }
-  if (latestWriting) applyReveal(latestWriting);
-
-  const featuredEssayEl = $("#featured-essay");
-  const featuredProjectEl = $("#featured-project");
-  if (featuredEssayEl) applyReveal(featuredEssayEl, ":scope > div, :scope > aside, :scope > a");
-  if (featuredProjectEl) applyReveal(featuredProjectEl, ":scope > div, :scope > aside");
-
-  animateHero();
+  $("#now-list").innerHTML = nowItems.map(nowCard).join("");
+  $("#principles").innerHTML = principles.map(principleCard).join("");
 }
 
 function renderWriting() {
   const writingGrid = $("#writing-grid");
   if (writingGrid) {
     writingGrid.innerHTML = writing.map(essayTile).join("");
-    applyReveal(writingGrid);
     return;
   }
 
   $("#writing-art").innerHTML = writingBlock("North's note: Writing is how I think in public.");
-  const writingList = $("#writing-list");
-  if (writingList) {
-    writingList.innerHTML = writing.map((item) => essayCard(item, "wide")).join("");
-    applyReveal(writingList);
-  }
+  $("#writing-list").innerHTML = writing.map((item) => essayCard(item, "wide")).join("");
 }
 
 function renderWritingB() {
-  const writingGrid = $("#writing-grid");
-  if (writingGrid) {
-    writingGrid.innerHTML = writing.map(essayTile).join("");
-    applyReveal(writingGrid);
-  }
+  $("#writing-grid").innerHTML = writing.map(essayTile).join("");
 }
 
 function renderProjects() {
-  const projectsList = $("#projects-list");
-  if (projectsList) {
-    projectsList.innerHTML = projects.map((item) => projectArchiveCard(item)).join("");
-    applyReveal(projectsList);
-  }
+  $("#projects-list").innerHTML = projects.map((item) => projectArchiveCard(item)).join("");
 }
 
 function renderNow() {
