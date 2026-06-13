@@ -35,13 +35,13 @@ function init() {
     appendMessage("user", text, thread);
     history.push({ role: "user", content: text });
 
-    const bubble = appendMessage("north", "", thread);
+    const indicator = appendTypingIndicator(thread);
 
     try {
-      const reply = await streamReply(bubble, thread);
+      const reply = await streamReply(indicator, thread);
       history.push({ role: "assistant", content: reply });
     } catch {
-      bubble.textContent = "Something went wrong. Please try again.";
+      appendMessage("north", "Something went wrong. Please try again.", thread);
     } finally {
       input.disabled = false;
       button.disabled = false;
@@ -59,7 +59,16 @@ function appendMessage(role, text, thread) {
   return div;
 }
 
-async function streamReply(bubble, thread) {
+function appendTypingIndicator(thread) {
+  const div = document.createElement("div");
+  div.className = "north-message north-message--north north-typing";
+  div.innerHTML = "<span></span><span></span><span></span>";
+  thread.appendChild(div);
+  thread.scrollTop = thread.scrollHeight;
+  return div;
+}
+
+async function streamReply(indicator, thread) {
   const response = await fetch(CHAT_ENDPOINT, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -67,6 +76,7 @@ async function streamReply(bubble, thread) {
   });
 
   if (!response.ok) {
+    indicator.remove();
     const errorText = await response.text().catch(() => "");
     console.error(`[North] API error ${response.status}:`, errorText);
     throw new Error(`HTTP ${response.status}`);
@@ -76,6 +86,7 @@ async function streamReply(bubble, thread) {
   const decoder = new TextDecoder();
   let fullText = "";
   let buffer = "";
+  let bubble = null;
 
   while (true) {
     const { done, value } = await reader.read();
@@ -88,21 +99,30 @@ async function streamReply(bubble, thread) {
     for (const line of lines) {
       if (!line.startsWith("data: ")) continue;
       const data = line.slice(6).trim();
-      if (data === "[DONE]") { linkify(bubble, fullText); return fullText; }
+      if (data === "[DONE]") {
+        if (bubble) linkify(bubble, fullText);
+        return fullText;
+      }
 
       try {
         const parsed = JSON.parse(data);
         const delta = parsed.choices?.[0]?.delta?.content ?? "";
-        fullText += delta;
-        bubble.textContent = fullText;
-        thread.scrollTop = thread.scrollHeight;
+        if (delta) {
+          if (!bubble) {
+            indicator.remove();
+            bubble = appendMessage("north", "", thread);
+          }
+          fullText += delta;
+          bubble.textContent = fullText;
+          thread.scrollTop = thread.scrollHeight;
+        }
       } catch {
         // skip malformed SSE chunks
       }
     }
   }
 
-  linkify(bubble, fullText);
+  if (bubble) linkify(bubble, fullText);
   return fullText;
 }
 
