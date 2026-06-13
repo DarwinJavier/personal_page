@@ -189,13 +189,18 @@ function projectCard(project, variant = "grid") {
   `;
 }
 
+function projectProofText(point) {
+  if (typeof point === "string") return point;
+  return point.title ? `${point.title}: ${point.text}` : point.text;
+}
+
 function projectArchiveCard(project) {
   const proofPoints = project.proofPoints || [project.northSignal, project.whatThisProves];
   const projectActions = [
-    `<a class="button secondary essay-card-cta" href="${project.githubUrl}" target="_blank" rel="noreferrer">View on GitHub ${icon("external")}</a>`,
     project.demoUrl
-      ? `<a class="button primary essay-card-cta" href="${project.demoUrl}" target="_blank" rel="noreferrer">View Form ${icon("external")}</a>`
+      ? `<a class="button primary essay-card-cta" href="${project.demoUrl}" target="_blank" rel="noreferrer">${project.appCtaLabel || "View App"} ${icon("external")}</a>`
       : "",
+    `<a class="button secondary essay-card-cta" href="${project.githubUrl}" target="_blank" rel="noreferrer">View on GitHub ${icon("external")}</a>`,
   ].join("");
   return `
     <article class="project-showcase-card">
@@ -324,16 +329,19 @@ function renderHome() {
       <div class="featured-project-copy">
         <span class="eyebrow">Featured Project</span>
         <h3>${featuredProject.title}</h3>
-        <p>${featuredProject.plainEnglishDescription}</p>
-        <p><strong>What this proves:</strong> ${featuredProject.whatThisProves}</p>
+        <p>${featuredProject.homeDescription || featuredProject.plainEnglishDescription}</p>
+        <p><strong>What this proves:</strong> ${featuredProject.homeWhatThisProves || featuredProject.whatThisProves}</p>
         ${tagList(featuredProject.builtWith)}
       </div>
     </div>
     <aside class="proof-list">
-      ${(featuredProject.proofPoints || [featuredProject.northSignal]).map((point, index) => `
-        <p><span>${lineIcon(["target", "brain", "globe"][index] || "target")}</span>${point}</p>
+      ${(featuredProject.proofPoints || [featuredProject.northSignal]).slice(0, 3).map((point, index) => `
+        <p><span>${lineIcon(["target", "brain", "globe"][index] || "target")}</span>${projectProofText(point)}</p>
       `).join("")}
-      <a class="text-link" href="${featuredProject.githubUrl}" target="_blank" rel="noreferrer">View on GitHub ${icon("arrow")}</a>
+      <div class="featured-project-actions">
+        ${featuredProject.demoUrl ? `<a class="button primary" href="${featuredProject.demoUrl}" target="_blank" rel="noreferrer">${featuredProject.appCtaLabel || "View App"} ${icon("external")}</a>` : ""}
+        <a class="text-link" href="${featuredProject.githubUrl}" target="_blank" rel="noreferrer">View on GitHub ${icon("arrow")}</a>
+      </div>
     </aside>
   `;
   $("#playlist").innerHTML = `
@@ -447,7 +455,7 @@ function schemaForAbout() {
         "name": "What has Darwin Hernandez built?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Darwin Hernandez has built several public AI projects including music-crewai (a multi-agent music research tool), Puchi & Pao's Sparkling Adventure (a 16-bit platform game), a job search agent, a family planner, and a Kanban board. All projects are open source on GitHub at github.com/DarwinJavier."
+          "text": "Darwin Hernandez builds public AI experiments and practical tools, including OctoOracle, a deterministic World Cup prediction experience; business-lead-assistant, an AI lead-intake workflow for local service businesses; music-crewai, a multi-agent music research tool; and Puchi & Pao's Sparkling Adventure, a 16-bit platform game. His public projects are available at darwinhernandez.com/projects/ and github.com/DarwinJavier."
         }
       },
       {
@@ -498,7 +506,12 @@ function schemaForProjects() {
         "@type": "SoftwareApplication",
         "name": project.title,
         "description": project.plainEnglishDescription,
-        "url": project.githubUrl,
+        "url": project.demoUrl || project.githubUrl,
+        "sameAs": project.githubUrl,
+        "applicationCategory": project.language,
+        "operatingSystem": "Web",
+        "image": `https://www.darwinhernandez.com/${project.image}`,
+        "keywords": project.builtWith.join(", "),
         "author": {
           "@type": "Person",
           "name": personSchema.name,

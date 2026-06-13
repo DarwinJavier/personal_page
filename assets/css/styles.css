@@ -1381,6 +1381,14 @@ time {
   width: 34px;
 }
 
+.featured-project-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
 .project-card h3 {
   font-size: 1.45rem;
 }

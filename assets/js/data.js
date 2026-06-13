@@ -235,10 +235,50 @@ export const writing = [
 
 export const projects = [
   {
+    slug: "octooracle",
+    title: "OctoOracle",
+    githubUrl: "https://github.com/DarwinJavier/octoracle",
+    demoUrl: "https://octoracle.vercel.app/",
+    appCtaLabel: "Go to OctoOracle",
+    language: "Next.js / Sports Analysis",
+    status: "Experiment",
+    shortDescription:
+      "A playful World Cup prediction app powered by deterministic match logic and an animated octopus.",
+    plainEnglishDescription:
+      "A World Cup 2026 experience where a playful animated octopus reveals a source-backed prediction for the featured match. The app combines fixture data, structured statistical signals, public-source research, prediction history, and an animated aquarium reveal without presenting outcomes as certainty.",
+    homeDescription:
+      "A World Cup 2026 experience where a source-backed prediction is revealed through a repeatable aquarium animation. It combines fixture data, statistical signals, prediction history, and honest fallback states.",
+    whatThisProves:
+      "Entertainment apps can still be thoughtful systems: transparent, repeatable, source-aware, and honest about uncertainty.",
+    homeWhatThisProves:
+      "Playful interfaces can make complex systems easier to understand without pretending uncertainty disappears.",
+    builtWith: ["Next.js", "Phaser", "Supabase", "OpenAI", "World Cup 2026", "Prediction UX"],
+    northSignal: "Make uncertainty understandable without making it disappear.",
+    proofPoints: [
+      {
+        title: "Deterministic predictions",
+        text: "Generates reproducible probabilities, expected goals, scorelines, confidence, and public explanations.",
+      },
+      {
+        title: "Animated aquarium reveal",
+        text: "Uses a playful octopus character to make the prediction feel memorable, repeatable, and fun.",
+      },
+      {
+        title: "Built with safeguards",
+        text: "Freezes predictions at kickoff, tracks results, handles stale data honestly, and avoids presenting predictions as betting advice.",
+      },
+    ],
+    stars: 0,
+    forks: 0,
+    featured: true,
+    image: "assets/Images/octooracle.png",
+  },
+  {
     slug: "business-lead-assistant",
     title: "business-lead-assistant",
     githubUrl: "https://github.com/DarwinJavier/business_lead_assistant",
     demoUrl: "https://business-lead-assistant.vercel.app/",
+    appCtaLabel: "View Form",
     language: "Next.js / AI Workflow",
     status: "Experiment",
     shortDescription:
@@ -310,7 +350,6 @@ export const projects = [
     ],
     stars: 0,
     forks: 0,
-    featured: true,
     image: "assets/Images/platform_project.png",
   },
   {
