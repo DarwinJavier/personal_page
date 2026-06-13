@@ -230,7 +230,7 @@ h3 {
 .text-link {
   color: var(--blueprint);
   font-weight: 750;
-  transition: color 180ms ease, opacity 180ms ease;
+  transition: color 180ms ease, opacity 180ms ease, transform 160ms var(--ease-out);
 }
 
 .social-link {
@@ -1036,9 +1036,9 @@ body[data-page="home"] #hero-art .generated-art .handwritten {
 .essay-tile {
   position: relative;
   transition:
-    border-color 200ms ease,
-    box-shadow 200ms ease,
-    transform 200ms var(--ease-out);
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms var(--ease-out);
 }
 
 .essay-card:focus-within,
@@ -1696,6 +1696,10 @@ time {
     border-color: rgba(89, 104, 242, 0.42);
     box-shadow: 0 24px 54px rgba(28, 42, 86, 0.13);
     transform: translateY(-3px);
+    transition:
+      border-color 200ms ease,
+      box-shadow 200ms ease,
+      transform 200ms var(--ease-out);
   }
 }
 
