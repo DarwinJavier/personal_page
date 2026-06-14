@@ -194,46 +194,6 @@ function projectProofText(point) {
   return point.title ? `${point.title}: ${point.text}` : point.text;
 }
 
-function projectArchiveCard(project) {
-  const proofPoints = project.proofPoints || [project.northSignal, project.whatThisProves];
-  const projectActions = [
-    project.demoUrl
-      ? `<a class="button primary essay-card-cta" href="${project.demoUrl}" target="_blank" rel="noreferrer">${project.appCtaLabel || "View App"} ${icon("external")}</a>`
-      : "",
-    `<a class="button secondary essay-card-cta" href="${project.githubUrl}" target="_blank" rel="noreferrer">View on GitHub ${icon("external")}</a>`,
-  ].join("");
-  return `
-    <article id="${project.slug}" class="project-showcase-card">
-      <div class="project-showcase-image" style="background-image: url('${assetPath(project.image)}')" aria-hidden="true"></div>
-      <div class="project-showcase-copy">
-        <div class="project-showcase-topline">
-          <span class="eyebrow">${project.language}</span>
-          <span class="pill">${project.status || (project.featured ? "Featured" : "Experiment")}</span>
-        </div>
-        <h2><a href="${pathFor(`projects/#${project.slug}`)}">${project.title}</a></h2>
-        <p class="strong">${project.shortDescription}</p>
-        <p>${project.plainEnglishDescription}</p>
-        <div class="project-proof">
-          <span class="eyebrow">What this proves</span>
-          <p>${project.whatThisProves}</p>
-        </div>
-        <div class="project-signal-list">
-          ${proofPoints.slice(0, 3).map((point, index) => `
-            <p>
-              <span class="project-signal-icon">${lineIcon(["target", "brain", "globe"][index] || "target")}</span>
-              <span class="project-signal-copy">${point.title ? `<strong>${point.title}</strong>` : ""}${point.text || point}</span>
-            </p>
-          `).join("")}
-        </div>
-        <div class="project-showcase-footer">
-          ${tagList(project.builtWith)}
-          <div class="project-actions">${projectActions}</div>
-        </div>
-      </div>
-    </article>
-  `;
-}
-
 function nowCard(item) {
   return `
     <article class="mini-card">
@@ -377,10 +337,6 @@ function renderWriting() {
 
 function renderWritingB() {
   $("#writing-grid").innerHTML = writing.map(essayTile).join("");
-}
-
-function renderProjects() {
-  $("#projects-list").innerHTML = projects.map((item) => projectArchiveCard(item)).join("");
 }
 
 function renderNow() {
@@ -534,6 +490,6 @@ localStorage.removeItem("darwin-theme");
 if (page === "home") { renderHome(); schemaForHome(); }
 if (page === "writing") { renderWriting(); schemaForWriting(); }
 if (page === "writing-b") renderWritingB();
-if (page === "projects") { renderProjects(); schemaForProjects(); }
+if (page === "projects") schemaForProjects();
 if (page === "now") renderNow();
 if (page === "about") { renderAbout(); schemaForAbout(); }

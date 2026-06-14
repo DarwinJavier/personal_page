@@ -15,6 +15,7 @@ After updating projects or writing in `assets/js/data.js`, regenerate the crawla
 
 ```powershell
 node scripts/render-static-content.mjs
+node scripts/verify-static-projects.mjs
 ```
 
 Commit the resulting changes to `projects/index.html` and `writing/index.html` with the content update.
