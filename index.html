@@ -26,23 +26,10 @@
     <meta name="twitter:title" content="Darwin Hernandez | AI-Fluent Product Marketing &amp; GTM Strategist">
     <meta name="twitter:description" content="Product Marketing and GTM strategist with deep AI fluency, a builder's mindset, and sharp analytical judgment. I translate complex technology into positioning, narrative, and growth.">
     <meta name="twitter:image" content="https://www.darwinhernandez.com/assets/img/wayfinder-hero.png">
+    <!-- STATIC_HOME_SCHEMA_START -->
+    <script id="home-person-schema" type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Darwin Hernandez","alternateName":["Darwin Javier Hernandez","Darwin Hernandez, Mr. Dasein"],"jobTitle":"Product Marketing & GTM Strategist","description":"AI-fluent Product Marketing and Go-to-Market (GTM) strategist, builder, writer, and critical thinker.","url":"https://www.darwinhernandez.com/","sameAs":["https://www.linkedin.com/in/darwin-javier-hernandez/","https://mrdasein.substack.com/","https://github.com/DarwinJavier"],"knowsAbout":["Product marketing","Go-to-market strategy","Artificial intelligence","AI-powered workflows","Strategic storytelling","Brand positioning","Culture and technology"]}</script>
+        <!-- STATIC_HOME_SCHEMA_END -->
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Darwin Hernandez",
-      "alternateName": ["Darwin Hernández", "Darwin Javier Hernandez", "Darwin Javier Hernández"],
-      "url": "https://www.darwinhernandez.com/",
-      "sameAs": [
-        "https://www.linkedin.com/in/darwin-javier-hernandez/",
-        "https://mrdasein.substack.com/",
-        "https://github.com/DarwinJavier"
-      ],
-      "jobTitle": "Product Marketing Manager",
-      "description": "AI-fluent Product Marketing and GTM strategist who turns ambiguous briefs into executable strategy."
-    }
-    </script>
   </head>
   <body data-page="home" data-root=".">
     <header id="site-header" class="site-header"></header>
@@ -66,26 +53,35 @@
       </section>
 
       <section class="intro-band">
-        <div class="shell intro-grid">
-          <div>
+        <div class="shell intro-stack">
+          <div class="site-purpose">
             <span class="eyebrow">What This Site Is</span>
-            <p>A curated home for my AI experiments, projects, writing, and cultural notes at the intersection of AI, product marketing, and practical strategy.</p>
+            <div>
+              <h2>A map of how I think, build, and create clarity.</h2>
+              <p>Explore the projects, writing, and cultural signals behind my work at the intersection of AI, product marketing, and practical strategy.</p>
+            </div>
           </div>
-          <div class="north-person" aria-hidden="true">
-            <img class="north-companion-img" src="./assets/img/wayfinder_explorer-cutout.png" alt="">
-          </div>
-          <div>
-            <span class="eyebrow">North's Note</span>
-            <p>This site connects the thinking, building, and taste behind Darwin's work.</p>
-            <a class="north-chat-cta" href="./about/#north-chat">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"></circle>
-                <path d="m15.5 8.5-2.1 4.9-4.9 2.1 2.1-4.9 4.9-2.1Z"></path>
-                <circle cx="12" cy="12" r="1"></circle>
-              </svg>
-              <span>Chat with Darwin's AI guide</span>
-              <span aria-hidden="true">-&gt;</span>
-            </a>
+
+          <div class="north-banner">
+            <div class="north-banner-copy">
+              <span class="eyebrow">Meet North, the site mascot</span>
+              <h2>Curious about Darwin's professional trajectory?</h2>
+              <p>North is Darwin's AI guide. Ask about his product marketing background, GTM strategy experience, AI fluency, strategic storytelling, public projects, and the ideas shaping his work.</p>
+              <div class="north-keywords" aria-label="Topics North can discuss">
+                <span>Professional background</span>
+                <span>Product marketing</span>
+                <span>GTM strategy</span>
+                <span>AI projects</span>
+                <span>Writing &amp; ideas</span>
+              </div>
+              <div class="north-banner-actions">
+                <a class="button primary north-banner-primary" href="./about/#north-chat">Chat with North -&gt;</a>
+                <a class="text-link north-banner-link" href="./about/">Explore Darwin's background -&gt;</a>
+              </div>
+            </div>
+            <div class="north-banner-art">
+              <img src="./assets/Images/north-chat-banner.jpg" alt="North, Darwin's Wayfinder mascot, presenting conversational insights">
+            </div>
           </div>
         </div>
       </section>
@@ -95,7 +91,27 @@
           <span class="eyebrow">Featured Projects</span>
           <a class="text-link" href="./projects/">View all projects -></a>
         </div>
-        <div id="featured-project" class="feature-grid"></div>
+        <!-- STATIC_HOME_FEATURED_PROJECT_START -->
+        <div id="featured-project" class="feature-grid">
+          <div class="featured-project-main">
+            <img class="featured-project-image" src="./assets/Images/octooracle.png" alt="">
+            <div class="featured-project-copy">
+              <span class="eyebrow">Featured Project</span>
+              <h3><a href="./projects/#octooracle">OctoOracle</a></h3>
+              <p>A World Cup 2026 experience where a source-backed prediction is revealed through a repeatable aquarium animation. It combines fixture data, statistical signals, prediction history, and honest fallback states.</p>
+              <p><strong>What this proves:</strong> Playful interfaces can make complex systems easier to understand without pretending uncertainty disappears.</p>
+              <div class="tags"><span>Next.js</span><span>Phaser</span><span>Supabase</span><span>OpenAI</span><span>World Cup 2026</span><span>Prediction UX</span></div>
+            </div>
+          </div>
+          <aside class="proof-list">
+            <p><span>01</span>Deterministic predictions: Generates reproducible probabilities, expected goals, scorelines, confidence, and public explanations.</p><p><span>02</span>Animated aquarium reveal: Uses a playful octopus character to make the prediction feel memorable, repeatable, and fun.</p><p><span>03</span>Built with safeguards: Freezes predictions at kickoff, tracks results, handles stale data honestly, and avoids presenting predictions as betting advice.</p>
+            <div class="featured-project-actions">
+              <a class="button primary" href="https://octoracle.vercel.app/" target="_blank" rel="noreferrer">Go to OctoOracle -&gt;</a>
+              <a class="text-link" href="https://github.com/DarwinJavier/octoracle" target="_blank" rel="noreferrer">View on GitHub -&gt;</a>
+            </div>
+          </aside>
+        </div>
+        <!-- STATIC_HOME_FEATURED_PROJECT_END -->
       </section>
 
       <section class="shell section">
@@ -103,36 +119,94 @@
           <span class="eyebrow">Featured Essay</span>
           <a class="text-link" href="./writing/">View all writing -></a>
         </div>
-        <div id="featured-essay" class="feature-grid"></div>
+        <!-- STATIC_HOME_FEATURED_ESSAY_START -->
+        <div id="featured-essay" class="feature-grid">
+          <div class="featured-essay-main">
+            <img class="featured-essay-image" src="./assets/Images/Harder-Page.png" alt="">
+            <div class="featured-essay-copy">
+              <span class="eyebrow">Essay Spotlight</span>
+              <h3><a href="./writing/#harder-better-faster-stronger">Harder, Better, Faster, Stronger</a></h3>
+              <p class="strong">On staying in the room.</p>
+              <p>A reflection on AI, tokens, judgment, and the work of staying in the room.</p>
+              <div class="tags"><span>AI</span><span>Judgment</span><span>Tech Culture</span><span>Creative Practice</span></div>
+            </div>
+          </div>
+          <div class="featured-essay-side">
+            <aside class="north-map-card">
+              <span class="eyebrow">North's Map of This Essay</span>
+              <ol><li><span class="map-logo"><img src="./assets/Images/Harder - thumb - 1.png" alt=""></span><div><strong>Stay in the room</strong><p>The tool can help build. You still have to guide.</p></div></li><li><span class="map-logo"><img src="./assets/Images/Harder - thumb - 2.png" alt=""></span><div><strong>Make it personal</strong><p>The best proof is meaning, not speed.</p></div></li><li><span class="map-logo"><img src="./assets/Images/Harder - thumb - 3.png" alt=""></span><div><strong>Spend attention wisely</strong><p>Tokens, tools, and focus are now strategic resources.</p></div></li><li><span class="map-logo"><img src="./assets/Images/Harder - thumb - 4.png" alt=""></span><div><strong>Keep the human loop</strong><p>If machines learn by watching us, be worth watching.</p></div></li></ol>
+              <p class="handwritten">Use the machine. Keep the part that makes you human.</p>
+            </aside>
+            <a class="button primary map-card-cta" href="https://mrdasein.substack.com/p/harder-better-faster-stronger" target="_blank" rel="noreferrer">Read full essay on Substack -&gt;</a>
+          </div>
+        </div>
+        <!-- STATIC_HOME_FEATURED_ESSAY_END -->
       </section>
 
       <section class="shell section">
         <div class="section-header">
-          <span class="eyebrow">Latest Writing</span>
-          <a class="text-link" href="./writing/">View all writing -></a>
+          <span class="eyebrow">The Writing Voice</span>
+          <a class="text-link" href="./writing/">Explore all writing -></a>
         </div>
-        <div id="latest-writing" class="card-grid"></div>
+        <!-- STATIC_HOME_MR_DASEIN_START -->
+        <div class="mr-dasein-banner">
+          <div class="mr-dasein-copy">
+            <span class="eyebrow">Darwin's Substack alter ego</span>
+            <h2>Meet Mr. Dasein</h2>
+            <p class="mr-dasein-lede">A critical, philosophical voice for examining AI, culture, and the systems quietly shaping how we live.</p>
+            <p>Mr. Dasein questions what feels settled, looks at technology from the social side, and still makes room for music, pop culture, and curiosity.</p>
+            <div class="mr-dasein-signals" aria-label="Topics explored by Mr. Dasein">
+              <span>AI &amp; society</span>
+              <span>Philosophy</span>
+              <span>Pop culture</span>
+              <span>Meaning</span>
+            </div>
+            <div class="mr-dasein-actions">
+              <a class="button mr-dasein-primary" href="https://mrdasein.substack.com/" target="_blank" rel="noreferrer">Read Mr. Dasein -&gt;</a>
+              <a class="mr-dasein-link" href="https://mrdasein.substack.com/p/welcome-to-mr-dasein" target="_blank" rel="noreferrer">Meet the voice -&gt;</a>
+            </div>
+          </div>
+        </div>
+        <!-- STATIC_HOME_MR_DASEIN_END -->
       </section>
 
       <section class="shell section">
         <div class="section-header">
           <span class="eyebrow">Listening Trail</span>
         </div>
-        <div id="playlist" class="feature-grid"></div>
+        <!-- STATIC_HOME_PLAYLIST_START -->
+        <div id="playlist" class="feature-grid">
+          <div class="listening-copy">
+            <h3>A mood board for quiet intensity</h3>
+            <p>A listening trail for the reflective side of building: songs that hold tension, memory, distance, and focus without demanding the whole room.</p>
+            <p><strong>Mood:</strong> Melancholic, nostalgic, introspective, and atmospheric.</p>
+            <p><strong>North's signal:</strong> Melancholy creates space. Nostalgia gives the work a shadow. The best ideas often arrive there.</p>
+            <div class="tags"><span>Melancholic</span><span>Nostalgic</span><span>Introspective</span><span>Atmospheric</span><span>Focus</span></div>
+            <a class="text-link" href="https://open.spotify.com/playlist/5MSqWs6XZv7SWsU704BHKd" target="_blank" rel="noreferrer">Open on Spotify -&gt;</a>
+          </div>
+          <div class="spotify-embed">
+            <iframe title="A mood board for quiet intensity on Spotify" src="https://open.spotify.com/embed/playlist/5MSqWs6XZv7SWsU704BHKd?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+        <!-- STATIC_HOME_PLAYLIST_END -->
       </section>
 
       <section class="shell section">
         <div class="section-header">
           <span class="eyebrow">Now</span>
         </div>
-        <div id="now-list" class="mini-grid"></div>
+        <!-- STATIC_HOME_NOW_START -->
+        <div id="now-list" class="mini-grid"><article class="mini-card"><span class="mini-icon" aria-hidden="true">FLASK</span><div><h3>Building</h3><p>AI agents, workflow tools, and small automation systems that augment GTM work.</p></div></article><article class="mini-card"><span class="mini-icon" aria-hidden="true">PEN</span><div><h3>Writing</h3><p>Essays on AI, strategy, marketing, and culture through long-form reflection.</p></div></article><article class="mini-card"><span class="mini-icon" aria-hidden="true">BOOK</span><div><h3>Reading</h3><p>Strategy, philosophy, economics, and the future of technology.</p></div></article><article class="mini-card"><span class="mini-icon" aria-hidden="true">HEADPHONES</span><div><h3>Listening</h3><p>Music, scenes, and creative movements that reveal cultural patterns.</p></div></article></div>
+        <!-- STATIC_HOME_NOW_END -->
       </section>
 
       <section class="shell section">
         <div class="section-header">
           <span class="eyebrow">Where This Becomes Useful</span>
         </div>
-        <div id="principles" class="principles-grid"></div>
+        <!-- STATIC_HOME_PRINCIPLES_START -->
+        <div id="principles" class="principles-grid"><article class="principle-card"><span aria-hidden="true">TARGET</span><div><h3>Product Marketing Judgment</h3><p>Messaging, positioning, GTM strategy, and enterprise buyer clarity.</p></div></article><article class="principle-card"><span aria-hidden="true">BRAIN</span><div><h3>AI Fluency</h3><p>Hands-on experiments with agents, APIs, GPTs, and emerging workflows.</p></div></article><article class="principle-card"><span aria-hidden="true">PENCIL</span><div><h3>Strategic Storytelling</h3><p>Turning complex ideas into narratives that connect and drive action.</p></div></article><article class="principle-card"><span aria-hidden="true">GLOBE</span><div><h3>Cultural Pattern Recognition</h3><p>Using music, books, and culture to understand how movements form and spread.</p></div></article></div>
+        <!-- STATIC_HOME_PRINCIPLES_END -->
       </section>
 
       <section class="shell section">

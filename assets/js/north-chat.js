@@ -1,6 +1,6 @@
 const CHAT_ENDPOINT = "/api/chat";
 const MAX_CHARS = 350;
-const STARTER = "Hi — I'm North, Darwin's guide. Ask me anything about his work, writing, or projects.";
+const STARTER = "Hi - I'm North, Darwin's guide. Ask me about his experience, strengths, projects, or how he approaches a GTM challenge.";
 
 const history = [];
 

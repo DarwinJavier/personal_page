@@ -28,7 +28,7 @@
     <meta name="twitter:image" content="https://www.darwinhernandez.com/assets/img/wayfinder-hero.png">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/north-chat.css">
-    <script type="application/ld+json">
+    <script id="about-person-schema" type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -40,8 +40,55 @@
         "https://mrdasein.substack.com/",
         "https://github.com/DarwinJavier"
       ],
-      "jobTitle": "Product Marketing Manager",
-      "description": "AI-fluent Product Marketing and GTM strategist who turns ambiguous briefs into executable strategy."
+      "jobTitle": "Product Marketing & GTM Strategist",
+      "description": "AI-fluent Product Marketing and GTM strategist who turns ambiguous briefs into executable strategy.",
+      "knowsAbout": [
+        "Product Marketing",
+        "Go-to-Market Strategy",
+        "Artificial Intelligence",
+        "Strategic Storytelling",
+        "Brand Positioning"
+      ]
+    }
+    </script>
+    <script id="about-faq-schema" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Darwin Hernandez?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Darwin Hernandez is an AI-fluent Product Marketing and Go-to-Market strategist, builder, and critical thinker who translates complex technology into clear positioning, narrative, and growth strategy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Darwin Hernandez specialize in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Darwin Hernandez specializes in product marketing, go-to-market strategy, AI-powered workflows, brand positioning, and strategic storytelling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What has Darwin Hernandez built?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Darwin Hernandez builds public AI experiments and practical tools, including OctoOracle, business-lead-assistant, music-crewai, and Puchi & Pao's Sparkling Adventure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I read Darwin Hernandez's writing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Darwin Hernandez publishes essays on AI, product marketing, culture, and strategy on Substack and indexes his writing at darwinhernandez.com/writing/."
+          }
+        }
+      ]
     }
     </script>
   </head>
@@ -61,44 +108,23 @@
       <section class="shell section">
         <div class="about-thesis">
           <div class="about-thesis-copy">
-            <h2>My working thesis</h2>
-            <p>Technology is accelerating. Judgment is scarce. The future belongs to those who can combine AI, strategy, and storytelling to create clarity and drive impact.</p>
-          </div>
-          <div class="about-care-list">
-            <h2>What I care about</h2>
-            <div class="tags">
-              <span>AI that augments human potential</span>
-              <span>GTM strategy that creates clarity</span>
-              <span>Communities and movements</span>
-              <span>Culture, music, and ideas</span>
-              <span>Building in public</span>
-              <span>Learning and sharing</span>
+            <div>
+              <span class="eyebrow">My working thesis</span>
+              <h2>Technology is accelerating.</h2>
+              <p class="thesis-pivot">Judgment is scarce.</p>
+              <p class="thesis-outcome">The future belongs to those who can combine AI, strategy, and storytelling to create clarity and drive impact.</p>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="shell section">
-        <div class="section-header">
-          <span class="eyebrow">Frequently Asked</span>
-        </div>
-        <div class="faq-north-grid">
-          <div class="faq-list">
-            <div class="faq-item">
-              <h3>Who is Darwin Hernandez?</h3>
-              <p>Darwin Hernandez is an AI-fluent Product Marketing and Go-to-Market (GTM) strategist, builder, and critical thinker. He helps companies translate complex technology into clear positioning, narrative, and growth strategy. He writes about AI, product marketing, and culture, and builds AI experiments and tools in public.</p>
-            </div>
-            <div class="faq-item">
-              <h3>What does Darwin Hernandez specialize in?</h3>
-              <p>Darwin Hernandez specializes in product marketing, go-to-market strategy, AI-powered workflows, brand positioning, and strategic storytelling. He brings both strategic judgment and hands-on building experience to GTM challenges.</p>
-            </div>
-            <div class="faq-item">
-              <h3>What has Darwin Hernandez built?</h3>
-              <p>Darwin Hernandez has built several public AI projects including music-crewai (a multi-agent music research tool), Puchi &amp; Pao's Sparkling Adventure (a 16-bit platform game), a job search agent, a family planner, and a Kanban board. All projects are open source on <a href="https://github.com/DarwinJavier" target="_blank" rel="noreferrer">GitHub</a>.</p>
-            </div>
-            <div class="faq-item">
-              <h3>Where can I read Darwin Hernandez's writing?</h3>
-              <p>Darwin Hernandez publishes essays on AI, product marketing, culture, and strategy on his <a href="https://mrdasein.substack.com/" target="_blank" rel="noreferrer">Substack</a> and indexes all writing at <a href="https://www.darwinhernandez.com/writing/" target="_blank" rel="noreferrer">darwinhernandez.com/writing/</a>.</p>
-            </div>
+            <a class="north-chat-orientation" href="#north-chat">
+              <span class="north-chat-orientation-art" aria-hidden="true">
+                <img src="../assets/north-chat.png" alt="">
+              </span>
+              <span class="north-chat-orientation-copy">
+                <span class="north-chat-orientation-label">A conversation with North</span>
+                <strong>Ask North about working with Darwin</strong>
+                <small>Get a quick read on his experience, strengths, projects, and approach to GTM problems.</small>
+              </span>
+              <span class="north-chat-orientation-arrow" aria-hidden="true">-&gt;</span>
+            </a>
           </div>
           <div class="north-chat" id="north-chat">
             <div class="north-chat-header">
@@ -114,7 +140,7 @@
                 <input
                   id="north-chat-input"
                   type="text"
-                  placeholder="Ask North about Darwin's work…"
+                  placeholder="Ask North about Darwin's work..."
                   maxlength="350"
                   autocomplete="off"
                   aria-label="Message North"
@@ -123,6 +149,42 @@
               </div>
               <span id="north-chat-counter" class="north-chat-counter">350</span>
             </form>
+          </div>
+        </div>
+      </section>
+      <section class="shell section">
+        <div class="section-header">
+          <span class="eyebrow">Frequently Asked</span>
+        </div>
+        <div class="faq-care-grid">
+          <div class="faq-list">
+            <div class="faq-item">
+              <h3>Who is Darwin Hernandez?</h3>
+              <p>Darwin Hernandez is an AI-fluent Product Marketing and Go-to-Market (GTM) strategist, builder, and critical thinker. He helps companies translate complex technology into clear positioning, narrative, and growth strategy. He writes about AI, product marketing, and culture, and builds AI experiments and tools in public.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What does Darwin Hernandez specialize in?</h3>
+              <p>Darwin Hernandez specializes in product marketing, go-to-market strategy, AI-powered workflows, brand positioning, and strategic storytelling. He brings both strategic judgment and hands-on building experience to GTM challenges.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What has Darwin Hernandez built?</h3>
+              <p>Darwin Hernandez builds public AI experiments and practical tools, including <a href="../projects/#octooracle">OctoOracle</a>, a deterministic World Cup prediction experience; <a href="../projects/#business-lead-assistant">business-lead-assistant</a>, an AI lead-intake workflow for local service businesses; music-crewai, a multi-agent music research tool; and Puchi &amp; Pao's Sparkling Adventure, a 16-bit platform game. Explore the full collection on the <a href="../projects/">Projects page</a> or <a href="https://github.com/DarwinJavier" target="_blank" rel="noreferrer">GitHub</a>.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Where can I read Darwin Hernandez's writing?</h3>
+              <p>Darwin Hernandez publishes essays on AI, product marketing, culture, and strategy on his <a href="https://mrdasein.substack.com/" target="_blank" rel="noreferrer">Substack</a> and indexes all writing at <a href="https://www.darwinhernandez.com/writing/" target="_blank" rel="noreferrer">darwinhernandez.com/writing/</a>.</p>
+            </div>
+          </div>
+          <div class="about-care-list">
+            <h2>What I care about</h2>
+            <div class="tags">
+              <span>AI that augments human potential</span>
+              <span>GTM strategy that creates clarity</span>
+              <span>Communities and movements</span>
+              <span>Culture, music, and ideas</span>
+              <span>Building in public</span>
+              <span>Learning and sharing</span>
+            </div>
           </div>
         </div>
       </section>

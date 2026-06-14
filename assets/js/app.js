@@ -156,11 +156,11 @@ function essayCard(essay, variant = "compact") {
 
 function essayTile(essay) {
   return `
-    <article class="essay-tile">
+    <article id="${essay.slug}" class="essay-tile">
       <div class="essay-tile-image essay-art" style="background-image: url('${assetPath(essay.image || "assets/img/writing-map.png")}')"></div>
       <div class="essay-tile-copy">
         <time>${formatDate(essay.date)}</time>
-        <h2>${essay.title}</h2>
+        <h2><a href="${pathFor(`writing/#${essay.slug}`)}">${essay.title}</a></h2>
         <p>${essay.summary}</p>
       </div>
       <div class="essay-tile-footer">
@@ -203,14 +203,14 @@ function projectArchiveCard(project) {
     `<a class="button secondary essay-card-cta" href="${project.githubUrl}" target="_blank" rel="noreferrer">View on GitHub ${icon("external")}</a>`,
   ].join("");
   return `
-    <article class="project-showcase-card">
+    <article id="${project.slug}" class="project-showcase-card">
       <div class="project-showcase-image" style="background-image: url('${assetPath(project.image)}')" aria-hidden="true"></div>
       <div class="project-showcase-copy">
         <div class="project-showcase-topline">
           <span class="eyebrow">${project.language}</span>
           <span class="pill">${project.status || (project.featured ? "Featured" : "Experiment")}</span>
         </div>
-        <h2>${project.title}</h2>
+        <h2><a href="${pathFor(`projects/#${project.slug}`)}">${project.title}</a></h2>
         <p class="strong">${project.shortDescription}</p>
         <p>${project.plainEnglishDescription}</p>
         <div class="project-proof">
@@ -302,11 +302,6 @@ function renderHome() {
   const playlist = playlists.find((item) => item.featured);
 
   $("#hero-art").innerHTML = compassBlock("Guided by: warm intelligence, practical experimentation, cultural taste.");
-  $("#latest-writing").innerHTML = writing
-    .filter((item) => !item.featured)
-    .slice(0, 3)
-    .map((item) => essayCard(item, "small"))
-    .join("");
   $("#featured-essay").innerHTML = `
     <div class="featured-essay-main">
       <img class="featured-essay-image" src="${assetPath(featuredEssay.featuredImage || featuredEssay.image)}" alt="">
@@ -393,8 +388,10 @@ function renderNow() {
   $("#now-projects").innerHTML = projects.slice(0, 3).map((item) => projectCard(item, "feature")).join("");
 }
 
-function injectSchema(schema) {
+function injectSchema(schema, id) {
+  if (id && document.getElementById(id)) return;
   const script = document.createElement("script");
+  if (id) script.id = id;
   script.type = "application/ld+json";
   script.textContent = JSON.stringify(schema);
   document.head.appendChild(script);
@@ -415,7 +412,7 @@ const personSchema = {
 };
 
 function schemaForHome() {
-  injectSchema(personSchema);
+  injectSchema(personSchema, "home-person-schema");
 }
 
 function schemaForAbout() {
@@ -429,7 +426,7 @@ function schemaForAbout() {
       "Storytelling",
       "Brand Positioning"
     ]
-  });
+  }, "about-person-schema");
   injectSchema({
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -467,7 +464,7 @@ function schemaForAbout() {
         }
       }
     ]
-  });
+  }, "about-faq-schema");
 }
 
 function schemaForWriting() {
@@ -491,7 +488,7 @@ function schemaForWriting() {
         }
       }
     }))
-  });
+  }, "writing-schema");
 }
 
 function schemaForProjects() {
@@ -519,7 +516,7 @@ function schemaForProjects() {
         }
       }
     }))
-  });
+  }, "projects-schema");
 }
 
 function renderAbout() {

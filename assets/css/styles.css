@@ -69,7 +69,7 @@ h3 {
 
 h1 {
   font-size: clamp(2.65rem, 6vw, 4.6rem);
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   max-width: 760px;
 }
 
@@ -229,7 +229,7 @@ h3 {
 .connect-row a,
 .text-link {
   color: var(--blueprint);
-  font-weight: 750;
+  font-weight: 700;
   transition: color 180ms ease, opacity 180ms ease, transform 160ms var(--ease-out);
 }
 
@@ -249,10 +249,10 @@ h3 {
 
 .north-chat-cta {
   align-items: center;
-  background: rgba(89, 104, 255, 0.07);
-  border: 1px solid rgba(89, 104, 242, 0.28);
+  background: var(--harbor);
+  border: 1px solid var(--harbor);
   border-radius: 8px;
-  color: var(--blueprint);
+  color: #fff;
   display: grid;
   font-family: var(--mono);
   font-size: 0.68rem;
@@ -260,9 +260,9 @@ h3 {
   gap: 10px;
   grid-template-columns: 28px 1fr auto;
   letter-spacing: 0.06em;
-  margin-top: 20px;
-  min-height: 46px;
-  padding: 7px 12px;
+  margin-top: 24px;
+  min-height: 52px;
+  padding: 9px 14px;
   transition:
     background-color 180ms ease,
     border-color 180ms ease,
@@ -311,7 +311,7 @@ h3 {
   background: var(--harbor);
   border-radius: 3px;
   color: var(--moonstone);
-  font-family: Inter, Arial, sans-serif;
+  font-family: var(--sans);
   font-size: 0.75rem;
   font-weight: 800;
 }
@@ -482,20 +482,153 @@ body[data-page="home"] #hero-art .generated-art .handwritten {
 }
 
 .about-thesis {
-  align-items: start;
+  align-items: stretch;
   border-top: 1px solid var(--line);
   display: grid;
-  gap: clamp(32px, 6vw, 88px);
-  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1fr);
+  gap: clamp(36px, 5vw, 64px);
+  grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1.1fr);
   padding-top: 40px;
 }
 
-.about-thesis-copy p {
+.about-thesis-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 620px;
+}
+
+.about-thesis-copy h2 {
   color: var(--harbor);
   font-family: var(--serif);
-  font-size: clamp(1.55rem, 3vw, 2.55rem);
-  line-height: 1.08;
+  font-size: clamp(2.25rem, 4vw, 3.45rem);
+  line-height: 1.02;
+  margin: 0 0 22px;
+  max-width: 440px;
+}
+
+.about-thesis-copy .eyebrow {
+  margin-bottom: 24px;
+}
+
+.thesis-pivot {
+  border-left: 2px solid var(--blueprint);
+  color: var(--blueprint);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin: 0 0 20px;
+  padding: 5px 0 5px 14px;
+  text-transform: uppercase;
+}
+
+.thesis-outcome {
+  color: var(--harbor-soft);
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  line-height: 1.22;
   margin: 0;
+  max-width: 470px;
+}
+
+.north-chat-orientation {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 148px minmax(0, 1fr) 40px;
+  margin-top: 40px;
+  min-height: 204px;
+  padding: 24px 22px 24px 18px;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 160ms var(--ease-out);
+}
+
+.north-chat-orientation-art {
+  align-self: stretch;
+  background: rgba(244, 245, 248, 0.72);
+  border: 1px solid rgba(112, 135, 160, 0.16);
+  border-radius: 6px;
+  display: block;
+  min-height: 132px;
+  overflow: hidden;
+  position: relative;
+}
+
+.north-chat-orientation-art img {
+  height: 232px;
+  left: 50%;
+  max-width: none;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 232px;
+}
+
+.north-chat-orientation-copy {
+  min-width: 0;
+}
+
+.north-chat-orientation-label {
+  color: var(--blueprint);
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+}
+
+.north-chat-orientation strong,
+.north-chat-orientation small {
+  display: block;
+}
+
+.north-chat-orientation strong {
+  color: var(--harbor);
+  font-size: 1.14rem;
+  line-height: 1.28;
+  margin-bottom: 9px;
+}
+
+.north-chat-orientation small {
+  color: var(--harbor-soft);
+  font-size: 0.94rem;
+  line-height: 1.52;
+}
+
+.north-chat-orientation-arrow {
+  align-items: center;
+  background: rgba(89, 104, 242, 0.08);
+  border: 1px solid rgba(89, 104, 242, 0.22);
+  border-radius: 50%;
+  color: var(--blueprint);
+  display: flex;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 800;
+  height: 40px;
+  justify-content: center;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 160ms var(--ease-out);
+  width: 40px;
+}
+
+.north-chat-orientation:active {
+  transform: scale(0.975);
+}
+
+.north-chat-orientation:active .north-chat-orientation-arrow {
+  transform: translateX(2px);
 }
 
 .about-care-list {
@@ -591,29 +724,136 @@ body[data-page="home"] #hero-art .generated-art .handwritten {
   border-block: 1px solid var(--line);
 }
 
-.intro-grid {
+.intro-stack {
+  display: grid;
+  gap: 32px;
+  padding: 44px 0 56px;
+}
+
+.site-purpose {
+  align-items: start;
+  border-bottom: 1px solid rgba(112, 135, 160, 0.24);
+  display: grid;
+  gap: clamp(24px, 5vw, 72px);
+  grid-template-columns: minmax(180px, 0.32fr) minmax(0, 1fr);
+  padding-bottom: 28px;
+}
+
+.site-purpose h2 {
+  font-size: clamp(1.7rem, 2.8vw, 2.5rem);
+  margin: 0 0 8px;
+  max-width: 760px;
+}
+
+.site-purpose p {
+  margin: 0;
+  max-width: 820px;
+}
+
+.north-banner {
+  background: #14223f;
+  border: 1px solid rgba(89, 104, 242, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 24px 56px rgba(15, 31, 59, 0.22);
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(380px, 0.92fr);
+  overflow: hidden;
+  position: relative;
+}
+
+.north-banner::before {
+  background: linear-gradient(180deg, var(--blueprint), var(--iris));
+  content: "";
+  inset: 0 auto 0 0;
+  position: absolute;
+  width: 4px;
+  z-index: 2;
+}
+
+.north-banner-copy {
+  align-self: center;
+  padding: clamp(34px, 4vw, 52px);
+  position: relative;
+  z-index: 1;
+}
+
+.north-banner-copy .eyebrow,
+.north-banner-copy .text-link {
+  color: #aeb8ff;
+}
+
+.north-banner-copy .eyebrow::after {
+  background: #aeb8ff;
+}
+
+.north-banner-copy h2 {
+  color: #fff;
+  font-size: clamp(2.4rem, 4vw, 3.65rem);
+  margin: 16px 0 18px;
+  max-width: 670px;
+}
+
+.north-banner-copy p {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1.02rem;
+  max-width: 620px;
+}
+
+.north-keywords,
+.north-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.north-keywords {
+  margin: 24px 0 32px;
+}
+
+.north-keywords span {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(174, 184, 255, 0.3);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.84);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 6px 11px;
+}
+
+.north-banner-actions {
   align-items: center;
-  display: grid;
-  gap: 42px;
-  grid-template-columns: 1fr 150px 1fr;
-  padding: 44px 0;
 }
 
-.north-person {
-  border-inline: 1px dashed rgba(51, 71, 216, 0.38);
-  display: grid;
-  min-height: 132px;
-  overflow: visible;
-  place-items: center;
-  text-align: center;
+.north-banner-primary {
+  background: var(--blueprint);
+  border-color: var(--blueprint);
+  color: #fff;
 }
 
-.north-companion-img {
+.north-banner-link {
+  margin-left: 10px;
+}
+
+.north-banner-art {
+  background: #14223f;
+  min-height: 540px;
+  overflow: hidden;
+  position: relative;
+}
+
+.north-banner-art::after {
+  content: none;
+}
+
+.north-banner-art img {
   display: block;
-  height: 142px;
-  mix-blend-mode: multiply;
+  height: 100%;
   object-fit: contain;
-  width: 188px;
+  object-position: center;
+  position: absolute;
+  width: 100%;
 }
 
 .wayfinder-mini {
@@ -1007,19 +1247,120 @@ body[data-page="home"] #hero-art .generated-art .handwritten {
   border-radius: 999px;
   color: var(--blueprint);
   font-size: 0.74rem;
-  font-weight: 750;
+  font-weight: 700;
   padding: 4px 10px;
 }
 
 .strong {
   color: var(--harbor);
-  font-weight: 760;
+  font-weight: 700;
 }
 
 .card-grid {
   display: grid;
   gap: 28px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mr-dasein-banner {
+  background:
+    linear-gradient(90deg, rgba(12, 17, 20, 0.98) 0%, rgba(12, 17, 20, 0.92) 38%, rgba(12, 17, 20, 0.3) 72%, rgba(12, 17, 20, 0.12) 100%),
+    url("../Images/mr-dasein-banner.jpg") 68% center / cover no-repeat;
+  border: 1px solid rgba(207, 178, 139, 0.28);
+  border-radius: 8px;
+  box-shadow: 0 30px 72px rgba(15, 20, 23, 0.24);
+  min-height: 520px;
+  overflow: hidden;
+  padding: clamp(32px, 5vw, 68px);
+  position: relative;
+}
+
+.mr-dasein-banner::after {
+  border: 1px solid rgba(207, 178, 139, 0.22);
+  content: "";
+  inset: 12px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.mr-dasein-copy {
+  position: relative;
+  width: min(570px, 52%);
+  z-index: 1;
+}
+
+.mr-dasein-copy .eyebrow {
+  color: #d5b68e;
+}
+
+.mr-dasein-copy .eyebrow::after {
+  background: #a43c2f;
+}
+
+.mr-dasein-copy h2 {
+  color: #f2dfc5;
+  font-size: clamp(3.4rem, 7vw, 6.4rem);
+  letter-spacing: -0.035em;
+  margin: 14px 0 18px;
+}
+
+.mr-dasein-copy p {
+  color: rgba(242, 223, 197, 0.76);
+  max-width: 54ch;
+}
+
+.mr-dasein-copy .mr-dasein-lede {
+  color: #f2dfc5;
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  line-height: 1.18;
+}
+
+.mr-dasein-signals,
+.mr-dasein-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mr-dasein-signals {
+  margin: 24px 0 32px;
+}
+
+.mr-dasein-signals span {
+  border: 1px solid rgba(213, 182, 142, 0.32);
+  border-radius: 999px;
+  color: #d5b68e;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 6px 11px;
+  text-transform: uppercase;
+}
+
+.mr-dasein-primary {
+  background: #a43c2f;
+  color: #fff4e6;
+}
+
+.mr-dasein-link {
+  align-items: center;
+  border-bottom: 1px solid rgba(213, 182, 142, 0.56);
+  color: #f2dfc5;
+  display: inline-flex;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mr-dasein-primary:hover {
+    background: #bd4939;
+  }
+
+  .mr-dasein-link:hover {
+    border-color: #f2dfc5;
+  }
 }
 
 .essay-card,
@@ -1264,6 +1605,16 @@ time {
   margin: 14px 0 12px;
 }
 
+.project-showcase-card h2 a,
+.essay-tile h2 a,
+.featured-project-copy h3 a,
+.featured-essay-copy h3 a,
+.essay-card h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
 .project-showcase-card p {
   color: var(--harbor-soft);
 }
@@ -1283,7 +1634,7 @@ time {
 
 .project-proof p {
   color: var(--harbor);
-  font-weight: 650;
+  font-weight: 600;
   margin: 8px 0 0;
 }
 
@@ -1411,7 +1762,7 @@ time {
   color: #fff;
   display: flex;
   font-size: 1.5rem;
-  font-weight: 850;
+  font-weight: 800;
   justify-content: center;
   letter-spacing: 0;
   min-width: 92px;
@@ -1451,7 +1802,7 @@ time {
   color: var(--harbor-soft);
   display: flex;
   font-size: 0.9rem;
-  font-weight: 650;
+  font-weight: 600;
   justify-content: flex-end;
   padding-top: 18px;
 }
@@ -1511,7 +1862,7 @@ time {
   border-radius: 50%;
   color: var(--blueprint);
   display: flex;
-  font-weight: 850;
+  font-weight: 800;
   height: 42px;
   justify-content: center;
   margin-bottom: 14px;
@@ -1665,9 +2016,34 @@ time {
   flex-direction: column;
   min-height: 500px;
   overflow: hidden;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms var(--ease-out);
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .north-chat-orientation:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(89, 104, 242, 0.38);
+    box-shadow: 0 14px 30px rgba(28, 42, 86, 0.09);
+    transform: translateY(-2px);
+  }
+
+  .north-chat-orientation:hover .north-chat-orientation-arrow {
+    background: rgba(89, 104, 242, 0.14);
+    border-color: rgba(89, 104, 242, 0.34);
+    transform: translateX(2px);
+  }
+
+  .project-showcase-card h2 a:hover,
+  .essay-tile h2 a:hover,
+  .featured-project-copy h3 a:hover,
+  .featured-essay-copy h3 a:hover,
+  .essay-card h3 a:hover {
+    color: var(--blueprint);
+  }
+
   .nav a:hover {
     border-color: var(--blueprint);
     color: var(--blueprint);
@@ -1692,10 +2068,10 @@ time {
   }
 
   .north-chat-cta:hover {
-    background: rgba(89, 104, 255, 0.12);
-    border-color: rgba(89, 104, 242, 0.48);
-    box-shadow: 0 8px 16px rgba(51, 71, 216, 0.1);
-    transform: translateY(-1px);
+    background: var(--blueprint-2);
+    border-color: var(--blueprint-2);
+    box-shadow: 0 14px 28px rgba(51, 71, 216, 0.2);
+    transform: translateY(-2px);
   }
 
   .essay-card.small:hover,
@@ -1704,10 +2080,6 @@ time {
     border-color: rgba(89, 104, 242, 0.42);
     box-shadow: 0 24px 54px rgba(28, 42, 86, 0.13);
     transform: translateY(-3px);
-    transition:
-      border-color 200ms ease,
-      box-shadow 200ms ease,
-      transform 200ms var(--ease-out);
   }
 }
 
@@ -1792,7 +2164,7 @@ time {
 .footer h2 {
   font-family: var(--sans);
   font-size: 0.78rem;
-  font-weight: 850;
+  font-weight: 800;
   letter-spacing: 0.16em;
   margin-bottom: 12px;
   text-transform: uppercase;
@@ -1876,6 +2248,10 @@ time {
 
   .about-thesis {
     grid-template-columns: 1fr;
+  }
+
+  .about-thesis-copy {
+    min-height: 0;
   }
 
   .about-care-list {
@@ -2008,6 +2384,41 @@ time {
     padding: 44px 0;
   }
 
+  .mr-dasein-banner {
+    background:
+      linear-gradient(180deg, rgba(12, 17, 20, 0.12) 0%, rgba(12, 17, 20, 0.52) 32%, rgba(12, 17, 20, 0.98) 62%),
+      url("../Images/mr-dasein-banner.jpg") 64% top / auto 42% no-repeat,
+      #0c1114;
+    min-height: 0;
+    padding: 230px 24px 28px;
+  }
+
+  .mr-dasein-copy {
+    width: 100%;
+  }
+
+  .mr-dasein-copy h2 {
+    font-size: 3.2rem;
+    margin-bottom: 12px;
+  }
+
+  .mr-dasein-copy .mr-dasein-lede {
+    font-size: 1.25rem;
+  }
+
+  .mr-dasein-signals {
+    margin: 18px 0 24px;
+  }
+
+  .mr-dasein-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mr-dasein-link {
+    margin: 6px 0 0;
+  }
+
   body[data-page="home"] #hero-art .generated-art {
     min-height: 96px;
   }
@@ -2018,7 +2429,6 @@ time {
   }
 
 
-  .intro-grid,
   .about-thesis,
   .card-grid,
   .essay-tile-grid,
@@ -2032,6 +2442,60 @@ time {
   .project-card.grid,
   .project-showcase-card {
     grid-template-columns: 1fr;
+  }
+
+  .site-purpose {
+    gap: 12px;
+    grid-template-columns: 1fr;
+  }
+
+  .north-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .north-banner-copy {
+    padding: 26px 24px 28px;
+  }
+
+  .north-banner-copy h2 {
+    font-size: 2.2rem;
+    margin: 12px 0 14px;
+  }
+
+  .north-banner-copy p {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .north-keywords {
+    gap: 6px 12px;
+    margin: 18px 0 24px;
+  }
+
+  .north-keywords span {
+    background: transparent;
+    border: 0;
+    color: #c7ceff;
+    font-size: 0.59rem;
+    padding: 0;
+  }
+
+  .north-banner-art {
+    min-height: 220px;
+    order: -1;
+  }
+
+  .north-banner-art::after {
+    content: none;
+  }
+
+  .north-banner-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .north-banner-link {
+    margin: 8px 0 0;
   }
 
   .project-showcase-card {
@@ -2070,6 +2534,38 @@ time {
   .about-contact-card .button {
     justify-self: start;
     min-width: 0;
+  }
+
+  .north-chat-orientation {
+    gap: 16px;
+    grid-template-columns: 112px minmax(0, 1fr);
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .north-chat-orientation-art {
+    min-height: 108px;
+  }
+
+  .north-chat-orientation-art img {
+    height: 176px;
+    width: 176px;
+  }
+
+  .north-chat-orientation-arrow {
+    display: none;
+  }
+
+  .north-chat-orientation-label {
+    font-size: 0.62rem;
+  }
+
+  .north-chat-orientation strong {
+    font-size: 1.02rem;
+  }
+
+  .north-chat-orientation small {
+    font-size: 0.88rem;
   }
 
   .writing-b-hero {
