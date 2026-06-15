@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE11LCJGM1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YE11LCJGM1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OctoOracle | World Cup Prediction App by Darwin Hernandez</title>
+    <meta name="description" content="See how Darwin Hernandez built OctoOracle, a playful World Cup 2026 prediction app with deterministic logic, source-aware research, and an animated octopus reveal.">
+    <meta name="author" content="Darwin Hernandez">
+    <meta name="keywords" content="OctoOracle, Darwin Hernandez, World Cup 2026, sports prediction app, Phaser, Next.js, Supabase, product marketing, AI systems">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="canonical" href="https://www.darwinhernandez.com/projects/octooracle/">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.darwinhernandez.com/projects/octooracle/">
+    <meta property="og:site_name" content="Darwin Hernandez">
+    <meta property="og:title" content="OctoOracle | A World Cup Prediction Ritual">
+    <meta property="og:description" content="Darwin Hernandez built OctoOracle to make sports predictions more understandable, social, and memorable without pretending uncertainty disappears.">
+    <meta property="og:image" content="https://www.darwinhernandez.com/assets/Images/octooracle.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OctoOracle by Darwin Hernandez">
+    <meta name="twitter:description" content="A playful World Cup prediction app backed by deterministic logic and a theatrical octopus reveal.">
+    <meta name="twitter:image" content="https://www.darwinhernandez.com/assets/Images/octooracle.png">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "OctoOracle",
+            "url": "https://octoracle.vercel.app/",
+            "sameAs": "https://github.com/DarwinJavier/octoracle",
+            "applicationCategory": "SportsApplication",
+            "operatingSystem": "Web",
+            "description": "A playful World Cup 2026 prediction app where an animated octopus reveals a deterministic, source-aware match forecast.",
+            "image": "https://www.darwinhernandez.com/assets/Images/octooracle.png",
+            "author": {
+              "@type": "Person",
+              "name": "Darwin Hernandez",
+              "url": "https://www.darwinhernandez.com/"
+            },
+            "keywords": "World Cup 2026, sports analysis, prediction UX, Next.js, Phaser, Supabase, OpenAI"
+          },
+          {
+            "@type": "Article",
+            "headline": "OctoOracle: A World Cup Prediction Ritual",
+            "description": "A detailed case study of how Darwin Hernandez conceived, positioned, and built OctoOracle.",
+            "dateModified": "2026-06-14",
+            "mainEntityOfPage": "https://www.darwinhernandez.com/projects/octooracle/",
+            "author": {
+              "@type": "Person",
+              "name": "Darwin Hernandez",
+              "url": "https://www.darwinhernandez.com/"
+            },
+            "about": {
+              "@type": "SoftwareApplication",
+              "name": "OctoOracle"
+            }
+          },
+          {
+            "@type": "VideoObject",
+            "name": "OctoOracle promotional demo",
+            "description": "A vertical promotional demo of OctoOracle, the World Cup prediction app built by Darwin Hernandez.",
+            "thumbnailUrl": "https://www.darwinhernandez.com/assets/Images/octooracle.png",
+            "uploadDate": "2026-06-14",
+            "contentUrl": "https://www.darwinhernandez.com/assets/video/octooracle-hero.mp4"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.darwinhernandez.com/"},
+              {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://www.darwinhernandez.com/projects/"},
+              {"@type": "ListItem", "position": 3, "name": "OctoOracle", "item": "https://www.darwinhernandez.com/projects/octooracle/"}
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is OctoOracle?",
+                "acceptedAnswer": {"@type": "Answer", "text": "OctoOracle is a World Cup 2026 prediction app built by Darwin Hernandez. It combines structured match signals and source-aware research with an animated octopus reveal."}
+              },
+              {
+                "@type": "Question",
+                "name": "Is OctoOracle a betting app?",
+                "acceptedAnswer": {"@type": "Answer", "text": "No. OctoOracle is an entertainment and product experiment. It explains uncertainty, freezes predictions at kickoff, and does not present forecasts as betting advice."}
+              },
+              {
+                "@type": "Question",
+                "name": "What inspired OctoOracle?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Darwin Hernandez was inspired by Paul the Octopus and reimagined the prediction ritual as a transparent, repeatable web product for the AI era."}
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+  </head>
+  <body data-page="projects" data-root="../..">
+    <header id="site-header" class="site-header"></header>
+    <main>
+      <nav class="project-detail-jump" aria-label="OctoOracle page sections">
+        <div class="shell">
+          <a href="#idea">The idea</a>
+          <a href="#audience">Audience</a>
+          <a href="#system">How it works</a>
+          <a href="#role">Darwin's role</a>
+          <a href="#future">Future uses</a>
+        </div>
+      </nav>
+      <article class="project-detail">
+        <section class="shell project-detail-hero">
+          <div class="project-detail-hero-copy">
+            <a class="back-link" href="../">Projects / OctoOracle</a>
+            <h1>OctoOracle</h1>
+            <p class="project-detail-deck">A playful World Cup prediction app where an animated octopus reveals the next match forecast, backed by deterministic logic, structured data, and a little bit of aquarium theater.</p>
+            <p>Darwin Hernandez built OctoOracle as a strange but serious experiment: what if a sports prediction app felt less like a spreadsheet and more like a social ritual?</p>
+            <p>The app takes the spirit of <a class="text-link" href="https://en.wikipedia.org/wiki/Paul_the_Octopus" target="_blank" rel="noreferrer">Paul the Octopus</a> and rebuilds it for the AI era. The octopus is fun. The reveal is theatrical. Behind the animation, the system is designed to be repeatable, source-aware, and honest about uncertainty.</p>
+            <div class="actions">
+              <a class="button primary" href="https://octoracle.vercel.app/" target="_blank" rel="noreferrer">Launch OctoOracle -&gt;</a>
+              <a class="button secondary" href="https://github.com/DarwinJavier/octoracle" target="_blank" rel="noreferrer">View on GitHub -&gt;</a>
+            </div>
+            <p class="project-byline">Built by Darwin Hernandez as a product, engineering, and AI systems experiment.</p>
+          </div>
+          <figure class="project-detail-video">
+            <video loop controls playsinline preload="metadata" poster="../../assets/Images/octooracle.png" aria-label="OctoOracle sizzle reel">
+              <source src="../../assets/video/octooracle-hero.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+          </figure>
+        </section>
+
+        <section id="idea" class="shell project-detail-section project-detail-intro">
+          <div class="project-detail-heading">
+            <span class="eyebrow">The idea</span>
+            <h2>A prediction app that behaves like a product, not a magic trick.</h2>
+          </div>
+          <div class="project-detail-prose">
+            <p>OctoOracle predicts the featured World Cup match, shows the expected score, explains the reasoning, and then lets an animated octopus reveal the result inside a mobile-first aquarium scene.</p>
+            <p>The point is not to pretend that the future is knowable. Darwin designed OctoOracle to make uncertainty more understandable, more shareable, and more fun.</p>
+          </div>
+        </section>
+
+        <section class="shell project-detail-section">
+          <div class="section-header">
+            <span class="eyebrow">What this proves</span>
+            <p class="handwritten project-detail-note">The fun is in the reveal. The discipline is in the system.</p>
+          </div>
+          <div class="project-detail-card-grid proof-grid">
+            <article class="project-detail-card">
+              <span class="project-detail-number">01</span>
+              <h3>Deterministic predictions</h3>
+              <p>Generates reproducible probabilities, expected goals, scorelines, confidence, and public explanations.</p>
+            </article>
+            <article class="project-detail-card">
+              <span class="project-detail-number">02</span>
+              <h3>Animated aquarium reveal</h3>
+              <p>Uses a playful octopus character to make the prediction memorable, repeatable, and fun.</p>
+            </article>
+            <article class="project-detail-card">
+              <span class="project-detail-number">03</span>
+              <h3>Built with safeguards</h3>
+              <p>Freezes predictions at kickoff, tracks results, handles stale data honestly, and avoids betting advice.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="project-detail-band">
+          <div class="shell project-detail-section project-detail-split">
+            <div>
+              <span class="eyebrow">Why Darwin built it</span>
+              <h2>Sports predictions deserve another lane.</h2>
+            </div>
+            <div class="project-detail-prose">
+              <p>Most sports prediction experiences fall into two boring categories: they are either too dry, or they drift too close to gambling culture. OctoOracle tries another lane.</p>
+              <p>Darwin built it for the fan who wants something to talk about before the match: the friend group watching the World Cup together, the casual fan who wants a quick story before kickoff, and the person who likes predictions without the fake expert voice.</p>
+              <p>The octopus does not decide randomly. It performs a stored prediction that already exists in the system. Darwin made the prediction engine visible through a character, separating the theatrical reveal from the disciplined logic behind it.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="audience" class="shell project-detail-section">
+          <div class="project-detail-heading">
+            <span class="eyebrow">Ideal customer profile</span>
+            <h2>Built for World Cup fans, group chats, and watch-party energy.</h2>
+            <p>The ideal user wants something fun, quick, and social before a match starts: a reason to argue, laugh, share, and ask what the octopus thinks.</p>
+          </div>
+          <div class="project-detail-card-grid audience-grid">
+            <article class="project-detail-card"><span class="pill">Ritual</span><h3>The watch-party host</h3><p>Wants a small shared moment people can react to before kickoff.</p></article>
+            <article class="project-detail-card"><span class="pill">Share</span><h3>The group-chat fan</h3><p>Wants a quick prediction with enough detail to start a debate.</p></article>
+            <article class="project-detail-card"><span class="pill">Clarity</span><h3>The casual viewer</h3><p>Does not follow every team deeply, but wants a simple read on the match.</p></article>
+            <article class="project-detail-card"><span class="pill">Proof</span><h3>The product-minded visitor</h3><p>Sees how data, AI-assisted research, UX, and storytelling can become one working product.</p></article>
+          </div>
+        </section>
+
+        <section class="shell project-detail-section project-detail-split">
+          <div>
+            <span class="eyebrow">What this solves</span>
+            <h2>It turns prediction into a social object.</h2>
+            <p class="handwritten project-detail-note">A scoreline is useful. A purple octopus choosing it is memorable.</p>
+          </div>
+          <div class="project-detail-list">
+            <article><h3>Makes uncertainty easier to understand</h3><p>The app shows probabilities, confidence, expected score, and short explanations without pretending the outcome is guaranteed.</p></article>
+            <article><h3>Separates entertainment from deception</h3><p>The octopus is playful, but the system is not random. The animation reveals a stored backend prediction.</p></article>
+            <article><h3>Handles real match states</h3><p>Before kickoff, the app reveals a prediction. At kickoff, it freezes. During the match, it stops pretending to predict what has already started.</p></article>
+            <article><h3>Creates a repeatable content format</h3><p>Every match can become a small event: next match, prediction, reveal, explanation, result, and accuracy history.</p></article>
+          </div>
+        </section>
+
+        <section id="system" class="project-detail-band">
+          <div class="shell project-detail-section">
+            <div class="project-detail-heading">
+              <span class="eyebrow">How it works</span>
+              <h2>A playful front end, backed by a disciplined prediction system.</h2>
+              <p>Darwin built OctoOracle as a full-stack web app, not just a static animation. The front end presents the aquarium experience. The backend handles fixtures, prediction lifecycle, research inputs, result sync, and safety controls.</p>
+            </div>
+            <div class="project-system-grid">
+              <article><span>01</span><h3>Frontend</h3><p>Next.js powers the application shell. Phaser handles the animated aquarium, octopus states, prediction boxes, and game-like interaction.</p></article>
+              <article><span>02</span><h3>Data and persistence</h3><p>Supabase stores fixtures, predictions, research observations, results, and prediction history.</p></article>
+              <article><span>03</span><h3>Fixture source</h3><p>A provider-neutral adapter supplies World Cup fixtures, match status, and results.</p></article>
+              <article><span>04</span><h3>Prediction engine</h3><p>Structured signals include team strength, recent form, attacking and defensive performance, squad availability, and validated public context.</p></article>
+              <article><span>05</span><h3>Research pipeline</h3><p>Public-source information can support the model, while untrusted text is prevented from directly controlling the prediction.</p></article>
+              <article><span>06</span><h3>Security posture</h3><p>Public routes are read-only, internal jobs are protected, secrets stay server-side, and system behavior remains explainable.</p></article>
+              <article><span>07</span><h3>Testing discipline</h3><p>The project validates formatting, linting, types, units, integrations, assets, builds, and end-to-end flows.</p></article>
+            </div>
+            <div class="tags project-detail-tags">
+              <span>Next.js</span><span>Phaser</span><span>Supabase</span><span>OpenAI</span><span>World Cup 2026</span><span>Prediction UX</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="role" class="shell project-detail-section project-detail-split">
+          <div>
+            <span class="eyebrow">Darwin's role</span>
+            <h2>A small product launch, not just a coding exercise.</h2>
+          </div>
+          <div class="project-detail-prose">
+            <p>For OctoOracle, Darwin Hernandez worked across product concept, positioning, UX direction, system rules, data behavior, visual direction, and implementation planning.</p>
+            <p>Darwin defined the core experience: a World Cup fan opens the app, sees the featured match, triggers the reveal, watches the octopus choose, and gets a prediction with enough explanation to feel meaningful.</p>
+            <p>He also shaped the credibility rules: group-stage draws, knockout advancement logic, prediction freezing, honest in-progress states, source-backed inputs, and no betting framing.</p>
+            <p>On the build side, Darwin structured the repository around clear project documentation, asset rules, implementation plans, security constraints, and a single source of truth for production sprites.</p>
+          </div>
+        </section>
+
+        <section class="shell project-detail-section">
+          <div class="project-detail-thesis">
+            <span class="eyebrow">Product thinking</span>
+            <h2>The real product is not the octopus. It is the ritual.</h2>
+            <p>OctoOracle works because sports are not only about information. They are about tension, timing, identity, and conversation.</p>
+            <div class="project-equation" aria-label="OctoOracle product pattern">
+              <span><strong>The prediction</strong> is the utility.</span>
+              <span><strong>The octopus</strong> is the memory hook.</span>
+              <span><strong>The reveal</strong> is the shareable moment.</span>
+              <span><strong>The explanation</strong> keeps it from feeling empty.</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="future" class="shell project-detail-section">
+          <div class="project-detail-heading">
+            <span class="eyebrow">Future uses</span>
+            <h2>A product pattern that can travel beyond football.</h2>
+          </div>
+          <div class="project-detail-card-grid future-grid">
+            <article class="project-detail-card"><h3>Award shows</h3><p>Predict who might win, then reveal it through a character or ritual.</p></article>
+            <article class="project-detail-card"><h3>Esports tournaments</h3><p>Create pre-match forecasts fans can share before a bracket match.</p></article>
+            <article class="project-detail-card"><h3>Fantasy sports</h3><p>Turn weekly picks into a more visual and repeatable fan experience.</p></article>
+            <article class="project-detail-card"><h3>Business forecasting</h3><p>Use the same pattern for scenario planning with an executive-facing interface.</p></article>
+            <article class="project-detail-card"><h3>Education</h3><p>Teach probability, uncertainty, and model behavior through playful interaction.</p></article>
+          </div>
+        </section>
+
+        <section class="shell project-detail-section project-detail-faq">
+          <div class="project-detail-heading">
+            <span class="eyebrow">Questions, answered</span>
+            <h2>OctoOracle at a glance.</h2>
+          </div>
+          <div class="faq-list">
+            <article class="faq-item"><h3>What is OctoOracle?</h3><p>OctoOracle is a World Cup 2026 prediction app built by Darwin Hernandez. It combines structured match signals and source-aware research with an animated octopus reveal.</p></article>
+            <article class="faq-item"><h3>Is OctoOracle a betting app?</h3><p>No. OctoOracle is an entertainment and product experiment. It explains uncertainty, freezes predictions at kickoff, and does not present forecasts as betting advice.</p></article>
+            <article class="faq-item"><h3>What inspired OctoOracle?</h3><p>Darwin was inspired by <a class="text-link" href="https://en.wikipedia.org/wiki/Paul_the_Octopus" target="_blank" rel="noreferrer">Paul the Octopus</a> and reimagined the prediction ritual as a transparent, repeatable web product for the AI era.</p></article>
+          </div>
+        </section>
+
+        <section class="shell project-detail-cta">
+          <div>
+            <span class="eyebrow">Ask the octopus before kickoff</span>
+            <h2>Can analytical systems feel more human without becoming less honest?</h2>
+            <p>That is the bigger question Darwin Hernandez is testing with OctoOracle.</p>
+          </div>
+          <div class="actions">
+            <a class="button primary" href="https://octoracle.vercel.app/" target="_blank" rel="noreferrer">Launch OctoOracle -&gt;</a>
+            <a class="button secondary" href="https://github.com/DarwinJavier/octoracle" target="_blank" rel="noreferrer">Explore the code -&gt;</a>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer id="site-footer" class="footer"></footer>
+    <script type="module" src="../../assets/js/app.js"></script>
+  </body>
+</html>

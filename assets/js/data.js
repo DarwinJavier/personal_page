@@ -237,6 +237,7 @@ export const projects = [
   {
     slug: "octooracle",
     title: "OctoOracle",
+    detailUrl: "projects/octooracle/",
     githubUrl: "https://github.com/DarwinJavier/octoracle",
     demoUrl: "https://octoracle.vercel.app/",
     appCtaLabel: "Go to OctoOracle",

@@ -172,18 +172,22 @@ function essayTile(essay) {
 }
 
 function projectCard(project, variant = "grid") {
+  const projectUrl = project.detailUrl ? pathFor(project.detailUrl) : project.githubUrl;
+  const projectAction = project.detailUrl
+    ? `<a href="${projectUrl}">Learn more ${icon("arrow")}</a>`
+    : `<a href="${project.githubUrl}" target="_blank" rel="noreferrer">View on GitHub ${icon("external")}</a>`;
   return `
     <article class="project-card ${variant}">
       <div class="project-icon ${project.slug}" style="background-image: url('${assetPath(project.image)}')" aria-hidden="true"></div>
       <div>
         <div class="card-topline">
-          <h3>${project.title}</h3>
+          <h3><a href="${projectUrl}">${project.title}</a></h3>
           <span class="pill">Public</span>
         </div>
         <p>${variant === "feature" ? project.plainEnglishDescription : project.shortDescription}</p>
       </div>
       <div class="project-meta">
-        <a href="${project.githubUrl}" target="_blank" rel="noreferrer">View on GitHub ${icon("external")}</a>
+        ${projectAction}
       </div>
     </article>
   `;
@@ -283,7 +287,7 @@ function renderHome() {
       <img class="featured-project-image" src="${assetPath(featuredProject.image)}" alt="">
       <div class="featured-project-copy">
         <span class="eyebrow">Featured Project</span>
-        <h3>${featuredProject.title}</h3>
+        <h3><a href="${featuredProject.detailUrl ? pathFor(featuredProject.detailUrl) : featuredProject.githubUrl}">${featuredProject.title}</a></h3>
         <p>${featuredProject.homeDescription || featuredProject.plainEnglishDescription}</p>
         <p><strong>What this proves:</strong> ${featuredProject.homeWhatThisProves || featuredProject.whatThisProves}</p>
         ${tagList(featuredProject.builtWith)}
@@ -295,7 +299,9 @@ function renderHome() {
       `).join("")}
       <div class="featured-project-actions">
         ${featuredProject.demoUrl ? `<a class="button primary" href="${featuredProject.demoUrl}" target="_blank" rel="noreferrer">${featuredProject.appCtaLabel || "View App"} ${icon("external")}</a>` : ""}
-        <a class="text-link" href="${featuredProject.githubUrl}" target="_blank" rel="noreferrer">View on GitHub ${icon("arrow")}</a>
+        ${featuredProject.detailUrl
+          ? `<a class="text-link" href="${pathFor(featuredProject.detailUrl)}">Learn more ${icon("arrow")}</a>`
+          : `<a class="text-link" href="${featuredProject.githubUrl}" target="_blank" rel="noreferrer">View on GitHub ${icon("arrow")}</a>`}
       </div>
     </aside>
   `;
@@ -459,7 +465,9 @@ function schemaForProjects() {
         "@type": "SoftwareApplication",
         "name": project.title,
         "description": project.plainEnglishDescription,
-        "url": project.demoUrl || project.githubUrl,
+        "url": project.detailUrl
+          ? `https://www.darwinhernandez.com/${project.detailUrl}`
+          : project.demoUrl || project.githubUrl,
         "sameAs": project.githubUrl,
         "applicationCategory": project.language,
         "operatingSystem": "Web",

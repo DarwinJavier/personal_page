@@ -47,12 +47,15 @@ function projectProofPoint(point, index) {
 }
 
 function projectCard(project) {
+  const detailUrl = project.detailUrl ? `./${project.detailUrl.replace(/^projects\//, "")}` : `./#${project.slug}`;
   const proofPoints = project.proofPoints || [project.northSignal, project.whatThisProves];
   const actions = [
     project.demoUrl
       ? `<a class="button primary essay-card-cta" href="${escapeHtml(project.demoUrl)}" target="_blank" rel="noreferrer">${escapeHtml(project.appCtaLabel || "View App")} -&gt;</a>`
       : "",
-    `<a class="button secondary essay-card-cta" href="${escapeHtml(project.githubUrl)}" target="_blank" rel="noreferrer">View on GitHub -&gt;</a>`,
+    project.detailUrl
+      ? `<a class="button secondary essay-card-cta" href="${escapeHtml(detailUrl)}">Learn more -&gt;</a>`
+      : `<a class="button secondary essay-card-cta" href="${escapeHtml(project.githubUrl)}" target="_blank" rel="noreferrer">View on GitHub -&gt;</a>`,
   ].filter(Boolean).join("\n                  ");
 
   return `
@@ -63,7 +66,7 @@ function projectCard(project) {
                 <span class="eyebrow">${escapeHtml(project.language)}</span>
                 <span class="pill">${escapeHtml(project.status || (project.featured ? "Featured" : "Experiment"))}</span>
               </div>
-              <h2><a href="./#${escapeHtml(project.slug)}">${escapeHtml(project.title)}</a></h2>
+              <h2><a href="${escapeHtml(detailUrl)}">${escapeHtml(project.title)}</a></h2>
               <p class="strong">${escapeHtml(project.shortDescription)}</p>
               <p>${escapeHtml(project.plainEnglishDescription)}</p>
               <div class="project-proof">
@@ -110,7 +113,9 @@ function projectSchema() {
         "@type": "SoftwareApplication",
         name: project.title,
         description: project.plainEnglishDescription,
-        url: project.demoUrl || project.githubUrl,
+        url: project.detailUrl
+          ? `https://www.darwinhernandez.com/${project.detailUrl}`
+          : project.demoUrl || project.githubUrl,
         sameAs: project.githubUrl,
         applicationCategory: project.language,
         operatingSystem: "Web",
@@ -151,6 +156,7 @@ function writingSchema() {
 }
 
 function homeFeaturedProject(project) {
+  const detailUrl = project.detailUrl ? `./${project.detailUrl}` : `./projects/#${project.slug}`;
   const proofs = (project.proofPoints || [project.northSignal]).slice(0, 3);
   const appAction = project.demoUrl
     ? `<a class="button primary" href="${escapeHtml(project.demoUrl)}" target="_blank" rel="noreferrer">${escapeHtml(project.appCtaLabel || "View App")} -&gt;</a>`
@@ -160,7 +166,7 @@ function homeFeaturedProject(project) {
             <img class="featured-project-image" src="${escapeHtml(homeAsset(project.image))}" alt="">
             <div class="featured-project-copy">
               <span class="eyebrow">Featured Project</span>
-              <h3><a href="./projects/#${escapeHtml(project.slug)}">${escapeHtml(project.title)}</a></h3>
+              <h3><a href="${escapeHtml(detailUrl)}">${escapeHtml(project.title)}</a></h3>
               <p>${escapeHtml(project.homeDescription || project.plainEnglishDescription)}</p>
               <p><strong>What this proves:</strong> ${escapeHtml(project.homeWhatThisProves || project.whatThisProves)}</p>
               ${tags(project.builtWith)}
@@ -170,7 +176,9 @@ function homeFeaturedProject(project) {
             ${proofs.map((point, index) => `<p><span>${String(index + 1).padStart(2, "0")}</span>${escapeHtml(typeof point === "string" ? point : `${point.title}: ${point.text}`)}</p>`).join("")}
             <div class="featured-project-actions">
               ${appAction}
-              <a class="text-link" href="${escapeHtml(project.githubUrl)}" target="_blank" rel="noreferrer">View on GitHub -&gt;</a>
+              ${project.detailUrl
+                ? `<a class="text-link" href="${escapeHtml(detailUrl)}">Learn more -&gt;</a>`
+                : `<a class="text-link" href="${escapeHtml(project.githubUrl)}" target="_blank" rel="noreferrer">View on GitHub -&gt;</a>`}
             </div>
           </aside>
         </div>`;
