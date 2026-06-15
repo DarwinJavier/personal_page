@@ -1,0 +1,24 @@
+# Darwin Hernandez
+
+> Darwin Hernandez is an AI-fluent product marketing and go-to-market strategist, writer, and practical builder. He connects AI, product marketing, strategic storytelling, culture, and useful experimentation.
+
+## Primary pages
+
+- [About Darwin Hernandez](https://www.darwinhernandez.com/about/): Background, expertise, working thesis, and answers about Darwin's work.
+- [Projects by Darwin Hernandez](https://www.darwinhernandez.com/projects/): Public AI workflows, product experiments, and practical tools.
+- [Writing by Darwin Hernandez](https://www.darwinhernandez.com/writing/): Essays on AI, product marketing, strategy, storytelling, and culture.
+- [OctoOracle case study](https://www.darwinhernandez.com/projects/octooracle/): How Darwin conceived, positioned, and built a deterministic World Cup prediction app with an animated octopus reveal.
+
+## OctoOracle
+
+OctoOracle is a World Cup 2026 prediction app built by Darwin Hernandez. It combines structured match signals, source-aware research, prediction history, safeguards, and an animated aquarium reveal. The project explores how analytical systems can feel more human without becoming less honest.
+
+- Case study: https://www.darwinhernandez.com/projects/octooracle/
+- Live application: https://octoracle.vercel.app/
+- Source code: https://github.com/DarwinJavier/octoracle
+
+## External profiles
+
+- LinkedIn: https://www.linkedin.com/in/darwin-javier-hernandez/
+- Substack: https://mrdasein.substack.com/
+- GitHub: https://github.com/DarwinJavier
