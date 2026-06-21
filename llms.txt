@@ -8,6 +8,7 @@
 - [Projects by Darwin Hernandez](https://www.darwinhernandez.com/projects/): Public AI workflows, product experiments, and practical tools.
 - [Writing by Darwin Hernandez](https://www.darwinhernandez.com/writing/): Essays on AI, product marketing, strategy, storytelling, and culture.
 - [OctoOracle case study](https://www.darwinhernandez.com/projects/octooracle/): How Darwin conceived, positioned, and built a deterministic World Cup prediction app with an animated octopus reveal.
+- [Business Lead Assistant case study](https://www.darwinhernandez.com/projects/business-lead-assistant/): How Darwin built an AI-assisted lead intake and qualification workflow for contractors and local service businesses.
 
 ## OctoOracle
 
@@ -16,6 +17,14 @@ OctoOracle is a World Cup 2026 prediction app built by Darwin Hernandez. It comb
 - Case study: https://www.darwinhernandez.com/projects/octooracle/
 - Live application: https://octoracle.vercel.app/
 - Source code: https://github.com/DarwinJavier/octoracle
+
+## Business Lead Assistant
+
+Business Lead Assistant is an AI-assisted lead intake app built by Darwin Hernandez for local contractors and service businesses. It turns vague homeowner inquiries into structured project briefs with summaries, fit scores, missing information, and recommended next steps.
+
+- Case study: https://www.darwinhernandez.com/projects/business-lead-assistant/
+- Live application: https://business-lead-assistant.vercel.app/
+- Source code: https://github.com/DarwinJavier/business_lead_assistant
 
 ## External profiles
 

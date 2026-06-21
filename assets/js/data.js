@@ -276,7 +276,8 @@ export const projects = [
   },
   {
     slug: "business-lead-assistant",
-    title: "business-lead-assistant",
+    title: "Business Lead Assistant",
+    detailUrl: "projects/business-lead-assistant/",
     githubUrl: "https://github.com/DarwinJavier/business_lead_assistant",
     demoUrl: "https://business-lead-assistant.vercel.app/",
     appCtaLabel: "View Form",

@@ -2658,6 +2658,10 @@ time {
   margin-bottom: 24px;
 }
 
+body[data-project="business-lead-assistant"] .project-detail-hero-copy h1 {
+  font-size: clamp(3.4rem, 7vw, 6.2rem);
+}
+
 .project-detail-deck {
   color: var(--harbor);
   font-family: var(--serif);
@@ -2818,6 +2822,14 @@ time {
 .future-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   margin-top: 28px;
+}
+
+body[data-project="business-lead-assistant"] .future-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body[data-project="business-lead-assistant"] .project-equation span:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .project-detail-card {

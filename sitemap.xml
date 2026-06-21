@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://www.darwinhernandez.com/about/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://www.darwinhernandez.com/projects/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -41,6 +41,23 @@
       <video:description>A promotional demo of OctoOracle, the World Cup prediction app built by Darwin Hernandez.</video:description>
       <video:content_loc>https://www.darwinhernandez.com/assets/video/octooracle-hero.mp4</video:content_loc>
       <video:publication_date>2026-06-14</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.darwinhernandez.com/projects/business-lead-assistant/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.darwinhernandez.com/assets/Images/contractor-lead-image.png</image:loc>
+      <image:title>Business Lead Assistant AI lead intake app by Darwin Hernandez</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://www.darwinhernandez.com/assets/Images/contractor-lead-image.png</video:thumbnail_loc>
+      <video:title>Business Lead Assistant product demo</video:title>
+      <video:description>A product demo of Business Lead Assistant, the AI-assisted contractor lead intake app built by Darwin Hernandez.</video:description>
+      <video:content_loc>https://www.darwinhernandez.com/assets/video/business-lead-assistant-hero.mp4</video:content_loc>
+      <video:publication_date>2026-06-20</video:publication_date>
     </video:video>
   </url>
   <url>
